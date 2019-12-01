@@ -10,7 +10,7 @@
      
      <button class="historyBack" @click="historyBack">돌아가기</button>
      <router-link to="/vue" tag="button" class="homeBtn">홈</router-link>
-     
+      
    
     <!--<Info></Info>-->
     <!-- <router-view></router-view> -->
