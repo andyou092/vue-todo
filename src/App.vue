@@ -5,7 +5,8 @@
     <router-link to="/info" >서비스 소개</router-link> |
     <router-link to="/guide" @click="hide" >이용 방법</router-link> |
     <router-link to="/todolist">Todolist</router-link> |
-    <router-link to="/counter">Counter</router-link>
+    <router-link to="/counter">Counter</router-link> |
+    <router-link to="/network">Network</router-link>
     <!--  <router-view name="info" >asas</router-view>  -->
     <!--<router-view name="guide" >가이드</router-view> -->
     <router-view></router-view> 

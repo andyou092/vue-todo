@@ -5,6 +5,7 @@ import DevProfile from './components/DevProfile.vue'
 import GuideTest from './components/GuideTest.vue'
 import TodoList from './views/todolist.vue'
 import Counter from './views/counter.vue'
+import Network from './views/network.vue'
 
 var routes=[
     {path:'/info', component:Info},
@@ -12,7 +13,8 @@ var routes=[
     {path:'/devProfile', component:DevProfile},
     {path:'/guideTest', component:GuideTest},
     {path:'/todolist', component:TodoList},
-    {path:'/counter', component: Counter}
+    {path:'/counter', component: Counter},
+    {path:'/network', component: Network}
   ];
 
 var router= new VueRouter({
