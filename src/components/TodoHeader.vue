@@ -1,5 +1,5 @@
 <template>
-   <header>TODO it!</header>
+   <header>TODO it! Go!</header>
 </template>
 
 <script>

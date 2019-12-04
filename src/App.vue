@@ -4,35 +4,23 @@
     <router-link to="/devProfile">개발자 프로필</router-link> |
     <router-link to="/info" >서비스 소개</router-link> |
     <router-link to="/guide" @click="hide" >이용 방법</router-link> |
-    <router-link to="/todolist">Todolist</router-link> |
+    <router-link to="/todolist">Todolist보기</router-link> |
     <router-link to="/counter">Counter</router-link> |
     <router-link to="/network">Network</router-link>
-    <!--  <router-view name="info" >asas</router-view>  -->
-    <!--<router-view name="guide" >가이드</router-view> -->
     <router-view></router-view> 
      
      <button class="historyBack" @click="historyBack">돌아가기</button>
      <router-link to="/vue" tag="button" class="homeBtn">홈</router-link>
-      
-   
-    <!--<Info></Info>-->
-    <!-- <router-view></router-view> -->
-    
-
     </div>
-    
-   
-
-   
 </template>
    
 
 <script>
 //컴포넌트를 사용하기 위해서 src를 입력를 주어 컴포넌트를 가지고 와라.
-import TodoHeader from './components/TodoHeader.vue'
-import TodoInput from './components/TodoInput.vue'
-import TodoList from './components/TodoList.vue'
-import TodoFooter from './components/TodoFooter.vue'
+//import TodoHeader from './components/TodoHeader.vue'
+//import TodoInput from './components/TodoInput.vue'
+//import TodoList from './components/TodoList.vue'
+//import TodoFooter from './components/TodoFooter.vue'
 
 
 //var TodoFooter={    //ES5버전으로 할때는 이렇게 해야하지만 별루다.  컴포넌트가 많아질 경우 지저분하고, 유지보수에 단점으로 작용할 것 같다.
@@ -65,11 +53,8 @@ export default{
             //index를 가지고온후에 내용수정? Input으로?
             localStorage.removeItem(todoItem);
             this.todoItems.splice(index,1);//4를 지우면 4에는 없거나 다른것이 있다.  인덱스 정보를가지고 있기에
-            
             localStorage.setItem(index,todoItem);
             this.todoItems.push(todoItem);
-            //this.todoItems.push( this.todoItems[index]=todoItem);
-           // this.todoItems.push(localStorage.key(index));
         },
         historyBack(){
             history.back();
@@ -90,11 +75,10 @@ export default{
         }
     },
     components: {//component를 등록해랏!
-      //  'Info':Info,
-        'TodoHeader': TodoHeader,
-        'TodoInput': TodoInput,
-        'TodoList': TodoList,
-        'TodoFooter': TodoFooter
+     //   'TodoHeader': TodoHeader//,
+     //   'TodoInput': TodoInput,
+     //   'TodoList': TodoList,
+     //   'TodoFooter': TodoFooter
   }
 
 }
