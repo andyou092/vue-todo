@@ -2,8 +2,21 @@
     <div>
         
         <!--<img src=""></img>-->
-         <p>개발자 소개</p>
+         <ul class="infoList">
+            <li>이름</li>
+            <li>나이</li>
+            <li>성별</li>
+            <li>거주지</li>
+         </ul>
+         <ul class="info">
+            <li>전하진</li>
+            <li>28살</li>
+            <li>남자</li>
+            <li>서울시 관악구 신림동</li>
+         </ul>
             <router-view ></router-view> <!--URL값에 따라서 갱신되는 화면 영역이다. 즉 컴포넌트가 뿌려질 영역-->
+            
+            
      </div>  
 
     
@@ -12,7 +25,11 @@
 
 
 
+
+
+
 <script>
+
 
 export default{
  
@@ -28,5 +45,32 @@ export default{
 </script>
 
 <style scoped>
+    ul{
+     background-color: lightblue;
+         outline: 10px dotted darkblue;
+         background-repeat: no-repeat;
+         background-position: right top;  
+        
+    }
+    li{
+         list-style-type : none;
+         
+    }
+
+
+    .infoList{
+        margin-left: 30%;
+       margin-top: 5%;
+        width: 100px; 
+         padding-right: 2%;
+         
+    
+    }
+    .info{
+        margin-top: -7%;
+        width: 300px;
+        margin-left: 45%;
+    }
+
 
 </style>

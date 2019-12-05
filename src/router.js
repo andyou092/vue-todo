@@ -6,8 +6,10 @@ import GuideTest from './components/GuideTest.vue'
 import TodoList from './views/todolist.vue'
 import Counter from './views/counter.vue'
 import Network from './views/network.vue'
+import TodoHeader from './components/TodoHeader.vue'
 
 var routes=[
+    {path:'/todoheader', component:TodoHeader},
     {path:'/info', component:Info},
     {path:'/guide', component:Guide},
     {path:'/devProfile', component:DevProfile},
@@ -17,7 +19,7 @@ var routes=[
     {path:'/network', component: Network}
   ];
 
-var router= new VueRouter({
+const router= new VueRouter({
   routes
 });
 

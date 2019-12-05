@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router'
-import router from './router'
-import Vuex from 'vuex'
-import store from './store'
+import VueRouter from 'vue-router'//라이브러리
+import router from './router'//.js
+import Vuex from 'vuex'//.js
+import store from './store'//폴더에 있는 자원을 사용 하겠다.
 //router를 사용하려면 VueRouter도 같이
 Vue.use(VueRouter)
 Vue.use(router)

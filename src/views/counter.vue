@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>{{$store.state.count}}</h3>
-        <button @click="increase">+1</button>
+        <button @click="increase1">+1</button>
         <button @click="decrease">-1</button>
     </div>
 </template>
@@ -21,7 +21,10 @@ export default {
         },
         decrease() {
             this.$store.commit('decrease')
-        }
+        },
+        increase1() {//action을 사용할 때는 dispatch를 써야 한다.
+           this.$store.dispatch('increase1');
+        },
     },
     computed: {
     }

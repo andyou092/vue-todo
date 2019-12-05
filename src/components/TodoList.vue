@@ -28,7 +28,7 @@ export default {
             console.log(todoItem,index);
         },
         updateTodo(todoItem,index){
-         var  updateItem =prompt('수정 내용을 입력하세요');
+         let updateItem =prompt('수정 내용을 입력하세요');
        
             this.$emit('updateTodo',updateItem,index);//이벤트명  removeTodo
             console.log(updateItem,index);
