@@ -2,6 +2,7 @@
 <div>
     <button @click.prevent="getData">axios 호출</button>
     <textarea v-model="res"/>
+    <p>{{res}} </p>
 </div>
 </template>
 <script>
@@ -16,26 +17,19 @@ export default {
     methods: {
         getData() {
             axios.get('https://jsonplaceholder.typicode.com/todos/1').then(res => {
-                return JSON.stringify(res.data.title)
+               // let value= JSON.stringify(res.data.id)+JSON.stringify(res.data.title);
+              //  let value1 = res.data.id+res.data.title+res.data.completed
+              //  return value1
+              alert(JSON.stringify(res.data.title)+JSON.stringify(res.data.id));
+                return JSON.stringify(res.data.id)+ JSON.stringify(res.data.title)
             }).then(json => {
                 this.res = json
             })
         }
-    },
-    actions: {
-                getServerData: function (context) {
-                return axios.get("sample.json").then(function() {
-                    
-                });
-                },
-                delayFewMinutes: function (context) {
-                return setTimeout(function () {
-                    commit('addCounter');
-                }, 1000);
-                }
-            }
-
+    
     }
+}
+    
 </script>
 <style scoped>
 
