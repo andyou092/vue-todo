@@ -53,6 +53,7 @@ export default{
         
     }
     li{
+        
          list-style-type : none;
          
     }
@@ -63,13 +64,14 @@ export default{
        margin-top: 5%;
         width: 100px; 
          padding-right: 2%;
-         
+        
     
     }
     .info{
         margin-top: -7%;
         width: 300px;
         margin-left: 45%;
+        
     }
 
 

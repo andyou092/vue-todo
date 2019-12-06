@@ -5,7 +5,8 @@ Vue.use(Vuex)
 //
 const store = new Vuex.Store ({
     state: {
-        count: 0
+        count: 0,
+        listCount:0
     },
     mutations: {
         increase(state) {
@@ -19,6 +20,14 @@ const store = new Vuex.Store ({
         ,
         decrease(state) {
             return   state.count = state.count - 1;
+        },
+        listCount(state) {
+            console.log('mutations listCount에 들어온다.'+state.listCount);
+            return    state.listCount = state.listCount + 1;
+        },
+        disListCount(state) {
+            console.log('mutations dislistCount에 들어온다.'+state.listCount);
+            return    state.listCount = state.listCount -1;
         }
     },
     actions: {

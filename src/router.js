@@ -7,6 +7,7 @@ import TodoList from './views/todolist.vue'
 import Counter from './views/counter.vue'
 import Network from './views/network.vue'
 import TodoHeader from './components/TodoHeader.vue'
+import LoginForm from './components/user/LoginForm'
 
 var routes=[
     {path:'/todoheader', component:TodoHeader},
@@ -16,7 +17,8 @@ var routes=[
     {path:'/guideTest', component:GuideTest},
     {path:'/todolist', component:TodoList},
     {path:'/counter', component: Counter},
-    {path:'/network', component: Network}
+    {path:'/network', component: Network},
+    {path:'/login', component: LoginForm},
   ];
 
 const router= new VueRouter({

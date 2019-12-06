@@ -1,16 +1,18 @@
 <!-- Component의 template를 뷰에 보이기 위해서  -->
 <template>
     <div id="app">
-    <TodoHeader></TodoHeader>
+    <TodoHeader router-link to="/vue" ></TodoHeader>|
+    <router-link to="/login">로그인</router-link> |
     <router-link to="/devProfile">개발자 프로필</router-link> |
     <router-link to="/info" >서비스 소개</router-link> |
     <router-link to="/guide" @click="hide" >이용 방법</router-link> |
     <router-link to="/todolist">Todolist보기</router-link> |
     <router-link to="/counter">Counter</router-link> |
-    <router-link to="/network">Network</router-link> 
+    <router-link to="/network">Network</router-link> |
     <button class="historyBack" @click="historyBack">돌아가기</button>
     <router-link to="/vue" tag="button" class="homeBtn">홈</router-link>
-    <router-view></router-view>     
+    <router-view></router-view> 
+     
     </div>
 </template>
    
@@ -70,8 +72,8 @@ export default{
         }
     },
     components: {//component를 등록해랏!
-        'TodoHeader': TodoHeader//,
-     //   'TodoInput': TodoInput,
+        'TodoHeader': TodoHeader,
+        
      //   'TodoList': TodoList,
      //   'TodoFooter': TodoFooter
   }
