@@ -2,7 +2,8 @@
 <template>
     <div id="app">
     <TodoHeader router-link to="/vue" ></TodoHeader>|
-    <router-link to="/login">로그인</router-link> |
+    
+    <router-link to="/user" >유저</router-link> | 
     <router-link to="/devProfile">개발자 프로필</router-link> |
     <router-link to="/info" >서비스 소개</router-link> |
     <router-link to="/guide" @click="hide" >이용 방법</router-link> |
@@ -22,7 +23,6 @@
 import TodoHeader from './components/TodoHeader'
 
 
-
 //var TodoFooter={    //ES5버전으로 할때는 이렇게 해야하지만 별루다.  컴포넌트가 많아질 경우 지저분하고, 유지보수에 단점으로 작용할 것 같다.
 //    template:'<div>ES5버전이다</div>'
 //};
@@ -34,28 +34,17 @@ export default{
     data(){//데이터 배열로 초기화 지정
         return{
             todoItems:[]//데이터 가방
+            ,users:[]
+        }
+    },
+    created(){
+        for(let i =0; i< localStorage.length;i++){
+                this.users.push(localStorage.key(i));
+                console.log(this.$store.state.listCount+'입니다.');
         }
     },
     methods:{
-        addTodo(todoItem){//Todo add
-            localStorage.setItem(todoItem,todoItem);
-            this.todoItems.push(todoItem);
-        },
-        clearAll(){//Todo AllRemove
-            localStorage.clear();//localStorage에 있는것을 모두 지워라.
-            this.todoItems=[];//초기화
-        },
-        removeTodo(todoItem,index){//Todo selectItemRemove
-            localStorage.removeItem(todoItem);
-            this.todoItems.splice(index,1);
-        },
-        updateTodo(todoItem,index){
-            //index를 가지고온후에 내용수정? Input으로?
-            localStorage.removeItem(todoItem);
-            this.todoItems.splice(index,1);//4를 지우면 4에는 없거나 다른것이 있다.  인덱스 정보를가지고 있기에
-            localStorage.setItem(index,todoItem);
-            this.todoItems.push(todoItem);
-        },
+       
         historyBack(){
             history.back();
         },
@@ -72,10 +61,8 @@ export default{
         }
     },
     components: {//component를 등록해랏!
-        'TodoHeader': TodoHeader,
-        
-     //   'TodoList': TodoList,
-     //   'TodoFooter': TodoFooter
+        'TodoHeader': TodoHeader
+  
   }
 
 }

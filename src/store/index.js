@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+
 //Vuex는 상태유지? 를 위해서 존재한다. action, state등
 Vue.use(Vuex)
 //

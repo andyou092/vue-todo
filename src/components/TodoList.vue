@@ -86,7 +86,6 @@ export default {
     opacity: 0;
     transform: translateY(30px);
     }
-</style>>
-
 </style>
+
 

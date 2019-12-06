@@ -64,7 +64,7 @@ export default {
             font-size: 0.9rem;
         }
         .addContainer {
-            float: right;
+            float:right;
             background: linear-gradient(to right, #6478FB, #8763FB);
             display: inline-block;
             width: 3rem;

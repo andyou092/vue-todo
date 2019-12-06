@@ -63,7 +63,6 @@ export default {
             //index를 가지고온후에 내용수정? Input으로?
             localStorage.removeItem(todoItem);
             this.todoItems.splice(index,1);//4를 지우면 4에는 없거나 다른것이 있다.  인덱스 정보를가지고 있기에
-            
             localStorage.setItem(index,todoItem);
             this.todoItems.push(todoItem);
             //this.todoItems.push( this.todoItems[index]=todoItem);
