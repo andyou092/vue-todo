@@ -7,9 +7,12 @@ import Todolist from './views/todolist.vue'
 import Counter from './views/counter.vue'
 import Network from './views/network.vue'
 import TodoHeader from './components/TodoHeader.vue'
-import LoginForm from './components/userComponent/LoginForm.vue'
-import User from './components/userComponent/User.vue'
+import Login from './components/userComponent/Login.vue'
+import SignUp from './components/userComponent/SignUp.vue'
+import User from './components//userComponent/User.vue'
 import UserList from './components/userComponent/UserList.vue'
+import AddUser from './components/userComponent/AddUser.vue'
+import App from './App.vue'
 
 var routes=[
     {path:'/todoheader', component:TodoHeader},
@@ -18,14 +21,18 @@ var routes=[
     {path:'/devProfile', component:DevProfile},
     {path:'/guideTest', component:GuideTest},
     {path:'/todolist', component:Todolist},
-    {path:'/counter', component: Counter},
-    {path:'/network', component: Network},
-    {path:'/loginform', component: LoginForm},
-    {path:'/user', component: User},
+    {path:'/counter', component:Counter},
+    {path:'/network', component:Network},
+   // {path:'/loginForm', component:LoginForm},
+    {path:'/user', component:User},
     {path:'/userlist', component: UserList},
+    {path:'/addUser', component: AddUser},
+    {path:'/login',name:'Login',component: Login},
+    {path:'/signup',name:'SignUp',component: SignUp}
   ];
 
 const router= new VueRouter({
+  mode:'history',
   routes
 });
 

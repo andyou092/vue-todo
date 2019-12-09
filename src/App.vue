@@ -2,11 +2,11 @@
 <template>
     <div id="app">
     <TodoHeader router-link to="/vue" ></TodoHeader>|
-    
-    <router-link to="/user" >유저</router-link> | 
+   
+    <router-link to="/user">유저</router-link> | 
     <router-link to="/devProfile">개발자 프로필</router-link> |
     <router-link to="/info" >서비스 소개</router-link> |
-    <router-link to="/guide" @click="hide" >이용 방법</router-link> |
+    <router-link to="/guide" >이용 방법</router-link> |
     <router-link to="/todolist">Todolist보기</router-link> |
     <router-link to="/counter">Counter</router-link> |
     <router-link to="/network">Network</router-link> |
@@ -21,37 +21,40 @@
 <script>
 //컴포넌트를 사용하기 위해서 src를 입력를 주어 컴포넌트를 가지고 와라.
 import TodoHeader from './components/TodoHeader'
-
+import firebase from 'firebase'
 
 //var TodoFooter={    //ES5버전으로 할때는 이렇게 해야하지만 별루다.  컴포넌트가 많아질 경우 지저분하고, 유지보수에 단점으로 작용할 것 같다.
 //    template:'<div>ES5버전이다</div>'
 //};
 
-
+// Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDDnksJybwBbhHk_a8dH_dI4VrpJqRNP4Q",
+    authDomain: "vue-todo-7bcd7.firebaseapp.com",
+    databaseURL: "https://vue-todo-7bcd7.firebaseio.com",
+    projectId: "vue-todo-7bcd7",
+    storageBucket: "vue-todo-7bcd7.appspot.com",
+    messagingSenderId: "495080120211",
+    appId: "1:495080120211:web:71a50ece62794ad3149266",
+    measurementId: "G-8QLKHZMJXT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 // 컴포넌트를 정의해준다.
 export default{
-   // name:'left',
+    name:'home',
     data(){//데이터 배열로 초기화 지정
         return{
             todoItems:[]//데이터 가방
-            ,users:[]
-        }
-    },
-    created(){
-        for(let i =0; i< localStorage.length;i++){
-                this.users.push(localStorage.key(i));
-                console.log(this.$store.state.listCount+'입니다.');
+            
         }
     },
     methods:{
        
         historyBack(){
             history.back();
-        },
-        hide(){
-            let lists =document.getElementById('list');
-            lists.hidden=true;
         }
+       
     },
     created(){
         if(localStorage.length >0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
@@ -87,5 +90,13 @@ export default{
     .shadow{
         box-shadow: 5px 10px 10px rgba(0,0,0,0.03)
     }
+    .router-link-active {
+        color: white;
+        background-color: red;
+    }
+    .router-link-exact-active {
+  color: white;
+  background-color: #62acde;;
+}
 </style>
 

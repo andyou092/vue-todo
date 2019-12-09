@@ -13,13 +13,15 @@ import TodoHeader from '../components/TodoHeader.vue'
 import TodoInput from '../components/TodoInput.vue'
 import TodoList from '../components/TodoList.vue'
 import TodoFooter from '../components/TodoFooter.vue'
+import User from '../components/userComponent/AddUser.vue'
 import { mapState } from 'vuex'
 export default {
     components: {//component를 등록해랏!
         'TodoHeader':TodoHeader,
         'TodoInput': TodoInput,
         'TodoList': TodoList,
-        'TodoFooter': TodoFooter
+        'TodoFooter': TodoFooter,
+        'User':User
     },
     data(){//데이터 배열로 초기화 지정
         return{
@@ -48,7 +50,7 @@ export default {
     },
     methods:{
         addTodo(todoItem){//Todo add
-            localStorage.setItem(todoItem,todoItem);
+            localStorage.setItem('todoItem',todoItem);
             this.todoItems.push(todoItem);
         },
         clearAll(){//Todo AllRemove
@@ -57,14 +59,15 @@ export default {
         },
         removeTodo(todoItem,index){//Todo selectItemRemove
             localStorage.removeItem(todoItem);
-            this.todoItems.splice(index,1);
+            this.todoItems.splice('index',1);
         },
         updateTodo(todoItem,index){
             //index를 가지고온후에 내용수정? Input으로?
             localStorage.removeItem(todoItem);
             this.todoItems.splice(index,1);//4를 지우면 4에는 없거나 다른것이 있다.  인덱스 정보를가지고 있기에
-            localStorage.setItem(index,todoItem);
             this.todoItems.push(todoItem);
+            localStorage.setItem(index,todoItem);
+            
             //this.todoItems.push( this.todoItems[index]=todoItem);
            // this.todoItems.push(localStorage.key(index));
         },

@@ -5,6 +5,7 @@
                     <i class="checkBtn fa fa-check" aria-hidden="true"></i>
                     <span>{{index}} : {{ user }}</span> <!--리스트 데이터 -->
             </li>
+            <router-view></router-view>
     </section>
 </template>
 

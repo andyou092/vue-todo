@@ -1,12 +1,14 @@
 <template>
    <div>
-   <header>하진이의 Vue.js</header>
+   <header>하진이의 Vue.js</header> <router-link to="/login" id="login">로그인</router-link> | 
    </div>
 </template>
 
 <script>
 export default {
+    methods:{
     
+    }
 }
 </script>
 
@@ -16,6 +18,9 @@ export default {
         color: #2F3B52;
         font-weight: 1000;
         margin: 2.5rem 0 1.5rem;
+    }
+    .login{
+        margin-top: 20%;
     }
 </style>
 
