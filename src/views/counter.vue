@@ -32,5 +32,14 @@ export default {
 }
 </script>
 <style scoped>
-
+button{
+    background-color: rgb(63, 78, 97); /* Green */
+    border: none;
+    color: white;
+    padding: 4px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 </style>

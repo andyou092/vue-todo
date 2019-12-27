@@ -1,7 +1,7 @@
 <template>
 <div>
-    <button @click.prevent="getData">axios 호출</button>
-    <textarea v-model="res"/>
+    <button class="axiosBlock" @click.prevent="getData">axios 호출</button>
+    <textarea  v-model="res"/>
     <p>{{res}} </p>
 </div>
 </template>
@@ -32,5 +32,17 @@ export default {
     
 </script>
 <style scoped>
-
+button{
+    background-color:gray; /* Green */
+    border: none;
+    color: white;
+    padding: 4px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .axiosBlock{
+       display: inline-block;
+  }
 </style>

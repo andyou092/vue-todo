@@ -8,8 +8,11 @@ import Counter from './views/counter.vue'
 import Network from './views/network.vue'
 import TodoHeader from './components/TodoHeader.vue'
 import Login from './components/userComponent/Login.vue'
+import GoogleLogin from './components/userComponent/GoogleLogin.vue'
+import FaceBookLogin from './components/userComponent/FaceBookLogin.vue'
+import LogOut from './components/userComponent/LogOut.vue'
 import SignUp from './components/userComponent/SignUp.vue'
-import User from './components//userComponent/User.vue'
+import EventTest from './components//userComponent/EventTest.vue'
 import UserList from './components/userComponent/UserList.vue'
 import AddUser from './components/userComponent/AddUser.vue'
 import App from './App.vue'
@@ -20,15 +23,20 @@ var routes=[
     {path:'/guide', component:Guide},
     {path:'/devProfile', component:DevProfile},
     {path:'/guideTest', component:GuideTest},
-    {path:'/todolist', component:Todolist},
+    {path:'/todolist',name:'todolist', component:Todolist},
     {path:'/counter', component:Counter},
     {path:'/network', component:Network},
    // {path:'/loginForm', component:LoginForm},
-    {path:'/user', component:User},
+    {path:'/eventTest',name:'EventTest', component:EventTest},
     {path:'/userlist', component: UserList},
     {path:'/addUser', component: AddUser},
     {path:'/login',name:'Login',component: Login},
+    {path:'/googlelogin',name:'GoogleLogin',component: GoogleLogin},
+    {path:'/facebooklogin',name:'FaceBookLogin',component: FaceBookLogin},
+    {path:'/logout',name:'LogOut',component: LogOut},
     {path:'/signup',name:'SignUp',component: SignUp}
+ 
+   
   ];
 
 const router= new VueRouter({

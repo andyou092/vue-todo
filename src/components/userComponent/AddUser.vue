@@ -4,9 +4,7 @@
         
             <input type="email" v-model="email" placeholder="Email Address">
             <input type="password" v-model="password" placeholder="Password">
-            
-        
-        <button @click="addUser">회원가입</button>
+            <button @click="addUser">회원가입</button>
         
     </div>
 </template>

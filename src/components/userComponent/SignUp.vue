@@ -24,7 +24,7 @@ export default {
         }
     },
     methods:{
-         signUp() {
+         signUp:function() {
              //createUserWithEmailAndPassword 메소드는 onResolve, onReject 콜백과 파이어베이스의 프로미스를 반환해준다.
             firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
                 function(user) {
@@ -51,9 +51,14 @@ export default {
         padding: 15px;
     }
     button{
-        margin-top: 20px;
-        width: 10%;
-        cursor: pointer;
+        background-color: #2F3B52; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     }
 
 </style>

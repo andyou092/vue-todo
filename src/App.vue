@@ -1,15 +1,17 @@
 <!-- Component의 template를 뷰에 보이기 위해서  -->
 <template>
     <div id="app">
-    <TodoHeader router-link to="/vue" ></TodoHeader>|
-   
-    <router-link to="/user">유저</router-link> | 
-    <router-link to="/devProfile">개발자 프로필</router-link> |
+          
+    <TodoHeader router-link to="/vue" ></TodoHeader>
+    
+    <!--<router-link to="/user">유저</router-link> |  -->
+    <router-link to="/devProfile">| 개발자 프로필</router-link> |
     <router-link to="/info" >서비스 소개</router-link> |
     <router-link to="/guide" >이용 방법</router-link> |
     <router-link to="/todolist">Todolist보기</router-link> |
     <router-link to="/counter">Counter</router-link> |
     <router-link to="/network">Network</router-link> |
+    <router-link to="/eventTest">EventTest</router-link> |
     <button class="historyBack" @click="historyBack">돌아가기</button>
     <router-link to="/vue" tag="button" class="homeBtn">홈</router-link>
     <router-view></router-view> 
@@ -22,24 +24,19 @@
 //컴포넌트를 사용하기 위해서 src를 입력를 주어 컴포넌트를 가지고 와라.
 import TodoHeader from './components/TodoHeader'
 import firebase from 'firebase'
-
+import { mapState } from 'vuex'
 //var TodoFooter={    //ES5버전으로 할때는 이렇게 해야하지만 별루다.  컴포넌트가 많아질 경우 지저분하고, 유지보수에 단점으로 작용할 것 같다.
 //    template:'<div>ES5버전이다</div>'
 //};
 
 // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDDnksJybwBbhHk_a8dH_dI4VrpJqRNP4Q",
-    authDomain: "vue-todo-7bcd7.firebaseapp.com",
-    databaseURL: "https://vue-todo-7bcd7.firebaseio.com",
-    projectId: "vue-todo-7bcd7",
-    storageBucket: "vue-todo-7bcd7.appspot.com",
-    messagingSenderId: "495080120211",
-    appId: "1:495080120211:web:71a50ece62794ad3149266",
-    measurementId: "G-8QLKHZMJXT"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+ 
+//로그아웃
+
+
+
+
+
 // 컴포넌트를 정의해준다.
 export default{
     name:'home',
@@ -72,10 +69,27 @@ export default{
 </script>
 <style>
     .homeBtn{
-        float: right;   
+       
+        background-color: #2F3B52; /* Green */
+        border: none;
+        color: white;
+        padding: 2px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+  
     }
     .historyBack{
-        float: right;
+        
+         background-color:  #2F3B52; /* Green */
+        border: none;
+        color: white;
+        padding: 2px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
 
     }
     body{

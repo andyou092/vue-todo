@@ -8,7 +8,9 @@ const store = new Vuex.Store ({
     state: {
         count: 0,
         listCount:0,
-        auth:false
+        auth:false,
+        loginAuth:false//falst이면 로그인 화면 나오도록
+        ,email:'logout'
     },
     mutations: {
         increase(state) {
@@ -32,7 +34,23 @@ const store = new Vuex.Store ({
             return    state.listCount = state.listCount -1;
         },
         userAuth(state){
+           
             return    state.auth = state.auth;
+        },
+        loginAuth(state){//로그인상태  true 니까 로그아웃 화면이 나와야한다
+            state.email=state.email
+            return    state.loginAuth = true,state.email;
+            
+        },
+        loginEmail(state){//로그인상태  true 니까 로그아웃 화면이 나와야한다
+            
+            return  state.email=state.email;
+            
+        }
+        ,
+        disLoginAuth(state){//로그인 안된상태
+            state.email='';
+            return    state.loginAuth = false;
         }
     },
     actions: {
