@@ -33,7 +33,7 @@ var routerPush = VueRouter.prototype.push
 const firebaseConfig = {
   apiKey: "AIzaSyDDnksJybwBbhHk_a8dH_dI4VrpJqRNP4Q",
   //authDomain: 'auth.custom.domain.com',
-   authDomain: "vue-todo-7bcd7.firebaseapp.com",
+  authDomain: "vue-todo-7bcd7.firebaseapp.com",
   databaseURL: "https://vue-todo-7bcd7.firebaseio.com",
   projectId: "vue-todo-7bcd7",
   storageBucket: "vue-todo-7bcd7.appspot.com",
