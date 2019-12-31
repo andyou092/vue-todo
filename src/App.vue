@@ -33,25 +33,19 @@ import { mapState } from 'vuex'
  
 //로그아웃
 
-
-
-
-
 // 컴포넌트를 정의해준다.
 export default{
     name:'home',
     data(){//데이터 배열로 초기화 지정
         return{
-            todoItems:[]//데이터 가방
-            
+            todoItems:[]//데이터 가방         
         }
     },
     methods:{
        
         historyBack(){
             history.back();
-        }
-       
+        }    
     },
     created(){
         if(localStorage.length >0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.

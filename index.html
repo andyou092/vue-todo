@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head profile="http://www.w3.org/2005/10/profile">
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 구글에 font awesome cdn 검색-->
@@ -11,19 +12,19 @@
     <!-- google font ubuntu 검색-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
      <!-- FirebaseUI를 추가합니다. -->
-  <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
 
-  <!-- 아래 css를 추가하지 않으면 구글 로그인 버튼이 이상하게 보이니 별도로 커스터마이징을 하지 않는다면 반드시 추가해야 할 것 같습니다. -->
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
-
+    <!-- 아래 css를 추가하지 않으면 구글 로그인 버튼이 이상하게 보이니 별도로 커스터마이징을 하지 않는다면 반드시 추가하면 좋다. -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" /> 
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+  
     <title>jhj-Vue.js</title>
   </head>
   <body>
-    <div id="app">   
-    </div>
-  
-    <script src="/dist/build.js"></script>
-    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+      <div id="app"></div>
+      <script src="/dist/build.js"></script>  
+      <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+      
 
  
 
