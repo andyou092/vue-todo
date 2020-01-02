@@ -20,8 +20,8 @@ export default {
                // let value= JSON.stringify(res.data.id)+JSON.stringify(res.data.title);
               //  let value1 = res.data.id+res.data.title+res.data.completed
               //  return value1
-              alert(JSON.stringify(res.data.title)+JSON.stringify(res.data.id));
-                return JSON.stringify(res.data.id)+ JSON.stringify(res.data.title)
+              alert(JSON.stringify(res.data.title));
+                return JSON.stringify(res.data.title);
             }).then(json => {
                 this.res = json
             })

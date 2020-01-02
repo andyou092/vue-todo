@@ -29,18 +29,25 @@ export default {
     created(){
        //localStorage.clear();
         //alert(localStorage.getItem.key(1))
-       alert('created localStorage.length는'+localStorage.length);
-        if(localStorage.length >2){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
-            this.$store.state.listCount=0;
-            for(let i =0; i< localStorage.length;i++){  
+       alert('created this.$store.state.listCount는'+this.$store.state.listCount);
+       //localStorage.length >2
+        if(this.$store.state.listCount <aa){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
+            //
+            //localStorage.lengt
+            for(let i =0; i< this.$store.state.listCount;i++){  
+                var aa=i;
             alert('created for문 들어온다'+localStorage.length )
                 this.todoItems.push(localStorage.key(i));
+            //    localStorage.setItem(todoItem);
                 console.log(this.$store.state.listCount+'입니다.');
                 this.$store.commit('listCount')
+                
             }
         }else{
-                 localStorage.clear;
+               alert('다시 확인해주세요');
+               
         } 
+        
     },
     watch:{
         todoItems: function (newVal) {
