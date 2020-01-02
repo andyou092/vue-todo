@@ -47,31 +47,26 @@ export default{
 <style scoped>
     ul{
      background-color: lightblue;
-         outline: 10px dotted darkblue;
-         background-repeat: no-repeat;
-         background-position: right top;  
-        
+        outline: 10px dotted darkblue;
+        background-repeat: no-repeat;
+        background-position: right top;  
+        height: auto;
     }
-    li{
-        
-         list-style-type : none;
-         
-    }
-
-
     .infoList{
-        margin-left: 30%;
-       margin-top: 5%;
+        float: left;
+        margin-left: 35%;
+        margin-top: 5%;
         width: 100px; 
-         padding-right: 2%;
-        
-    
+        list-style-type : none;
+        padding-right: 2%;
     }
+
     .info{
-        margin-top: -7%;
+         float: left;
+        margin-top: 5%;
         width: 300px;
-        margin-left: 45%;
-        
+        margin-left: 7%;
+         list-style-type : none;
     }
 
 
