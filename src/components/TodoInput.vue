@@ -32,7 +32,7 @@ export default {
           if(this.newTodoItem !== ""){
               var value = this.newTodoItem && this.newTodoItem.trim();
                         this.$emit('addTodo',value);
-              //localStorage.setItem(value,value);
+              localStorage.setItem(value,value);
               this.clearInput();
           }else{
               this.showModal = !this.showModal;
