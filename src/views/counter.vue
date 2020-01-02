@@ -33,7 +33,7 @@ export default {
 </script>
 <style scoped>
 button{
-    background-color: rgb(63, 78, 97); /* Green */
+    background-color: rgb(63, 78, 97); /* gray */
     border: none;
     color: white;
     padding: 4px 30px;
@@ -41,5 +41,11 @@ button{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+  }
+  h3{
+      margin-top: 2%;
+      border: 1px solid gray;
+      width: 6.1%;
+      margin-left: 46.9%;
   }
 </style>

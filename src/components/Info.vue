@@ -1,7 +1,9 @@
 <template>
-    <div>
+    <div class="info">
         
-          <p>안녕하세요. 이 어플은 Vue.js를 이용하여 해야할 일을 모아 목록을 만든뒤 관리할 수 있도록 하기 위한 애플리케이션 입니다.</p>
+        <p>안녕하세요.</p> 
+        <p>Vue.js를 이용하여 해야할 일을 모아 목록을 만든뒤 관리 기능.</p>
+        <p>로그인 및 이벤트 테스트를 하기 위한 애플리케이션 입니다.</p>
           <!-- router-view ></router-view> -->
           
      </div>  
@@ -31,7 +33,12 @@ export default{
 </script>
 
 <style scoped>
-.infoBtn{
-    float: left;
-}
+    .info{
+        margin-top: 5%;
+        margin-left: 35%;
+        width: 30%;
+        border:3px solid rgb(63, 78, 97);;
+    }
+
+
 </style>

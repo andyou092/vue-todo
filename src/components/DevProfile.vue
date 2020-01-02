@@ -46,8 +46,8 @@ export default{
 
 <style scoped>
     ul{
-     background-color: lightblue;
-        outline: 10px dotted darkblue;
+   
+        outline: 3px solid rgb(63, 78, 97);;
         background-repeat: no-repeat;
         background-position: right top;  
         height: auto;
@@ -56,17 +56,18 @@ export default{
         float: left;
         margin-left: 35%;
         margin-top: 5%;
-        width: 100px; 
+        width: 6%; 
         list-style-type : none;
         padding-right: 2%;
     }
 
     .info{
-         float: left;
+        float: left;
         margin-top: 5%;
         width: 300px;
-        margin-left: 7%;
-         list-style-type : none;
+        margin-left: 3%;
+        list-style-type : none;
+        width: 15%;
     }
 
 

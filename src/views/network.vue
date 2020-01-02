@@ -1,9 +1,9 @@
 <template>
-<div>
-    <button class="axiosBlock" @click.prevent="getData">axios 호출</button>
-    <textarea  v-model="res"/>
-    <p>{{res}} </p>
-</div>
+    <div>
+        <textarea class="response"  v-model="res"/>
+        <p>{{res}} </p>
+        <button class="axiosBlock" @click.prevent="getData">axios 호출</button>
+    </div>
 </template>
 <script>
 import axios from 'axios'
@@ -32,17 +32,15 @@ export default {
     
 </script>
 <style scoped>
-button{
-    background-color:gray; /* Green */
-    border: none;
+.axiosBlock{
+    background-color:rgb(63, 78, 97); /* gray */
     color: white;
     padding: 4px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    text-decoration: none;  
     font-size: 16px;
   }
-  .axiosBlock{
-       display: inline-block;
+  .response{
+        margin-top: 2%;
+
   }
 </style>
