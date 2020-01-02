@@ -9,8 +9,12 @@ const store = new Vuex.Store ({
         count: 0,
         listCount:0,
         auth:false,
-        loginAuth:false//falst이면 로그인 화면 나오도록
-        ,email:'logout'
+        loginAuth:false,
+        email:'logout',
+        todoC:false,
+        todoU:false,
+        todoD:false,
+        todoAD:false
     },
     mutations: {
         increase(state) {
@@ -27,11 +31,12 @@ const store = new Vuex.Store ({
         },
         listCount(state) {
             console.log('mutations listCount에 들어온다.'+state.listCount);
+            
             return    state.listCount = state.listCount + 1;
         },
         disListCount(state) {
             console.log('mutations dislistCount에 들어온다.'+state.listCount);
-            return    state.listCount = state.listCount -1;
+            return   state.listCount = state.listCount -1;
         },
         userAuth(state){
            
@@ -51,7 +56,36 @@ const store = new Vuex.Store ({
         disLoginAuth(state){//로그인 안된상태
             state.email='';
             return    state.loginAuth = false;
-        }
+        },
+        todoC(state){//추가를 하는 과정      
+            return    state.todoC = true;
+        },
+        disTodoC(state){//로그인 안된상태
+            
+            return    state.todoC = false;
+        },
+        todoU(state){//추가를 하는 과정      
+            return    state.todoU = true;
+        },
+        disTodoU(state){//로그인 안된상태
+            
+            return    state.todoU = false;
+        },
+        todoD(state){//추가를 하는 과정      
+            return    state.todoD = true;
+        },
+        disTodoD(state){//로그인 안된상태
+            
+            return    state.todoD = false;
+        },
+        allDisTodoItems(state){
+            this.state.listCount=0;
+           return state.todoAD = true; 
+        },
+        noDisAllTodoItems(state){
+
+            return state.todoAD = false; 
+         }
     },
     actions: {
         increase1: function (state) {

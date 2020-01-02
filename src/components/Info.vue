@@ -17,7 +17,6 @@
 <script>
 //var Info={templte:'<div><p>메롱</p></div>'};
 //var Guide={templte:'<div><p>메롱1</p></div>'};
-    console.log('INFO에 들어온다');
 
 export default{
  

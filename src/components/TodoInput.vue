@@ -19,7 +19,7 @@
 <script>
 
 import Modal from './common/Modal.vue'
-
+import { mapState } from 'vuex'
 export default {
     data(){
         return {
@@ -29,14 +29,20 @@ export default {
     },
     methods:{
         addTodo(){//setItem은 로컬 스토리지에 데이터를 추가하는 API이다.
-          if(this.newTodoItem !== ""){
+           if(this.newTodoItem !== ""){
+            alert('TODO Info의 if')
               var value = this.newTodoItem && this.newTodoItem.trim();
-                        this.$emit('addTodo',value);
-              localStorage.setItem(value,value);
-              this.clearInput();
+                this.$emit('addTodo',value);
+                this.$store.commit('todoC')
+                //this.$store.commit('listCount')
+                //localStorage.setItem('todoItem',newTodoItem);
+                this.clearInput();
           }else{
+              alert('TODO Info의 else')
               this.showModal = !this.showModal;
-          }
+          } 
+      
+
         },
         clearInput(){//text란을 초기화 해주기 위해서.
             this.newTodoItem='';

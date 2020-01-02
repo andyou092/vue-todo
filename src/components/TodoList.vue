@@ -4,7 +4,7 @@
         <transition-group name="list" tag="ul">
             <li v-for="(todoItem,index) in propsdata" :key="todoItem" class="shadow" > 
                 <i class="checkBtn fa fa-check" aria-hidden="true"></i>
-                    <span>{{index}} : {{ todoItem }}</span> <!--리스트 데이터 -->
+                    <span>{{index+1}} : {{ todoItem }}</span> <!--리스트 데이터 -->
                 <span class="updateBtn" type="button" @click="updateTodo(todoItem, index)">
                      <i class="checkBtn fas fa-wrench" aria-hidden="true"></i>     
                 </span>        
@@ -24,13 +24,13 @@ export default {
     props:['propsdata'],   //Vue컴포넌트에서 v-bind:propsdata="todoItems" 이렇게해서 데이터를 보낸것을 받고 이것을 템플레이트에서 활용하여 List를 출력한다. 
     methods:{
         removeTodo(todoItem,index){
-           this.$emit('removeTodo',todoItem,index);//이벤트명  removeTodo
-            console.log(todoItem,index);
+            alert('todoList의 removeTodo의 todoItem, index:',index);
+            this.$emit('removeTodo',todoItem,index);//이벤트명  removeTodo
+            
         },
         updateTodo(todoItem,index){
-         let updateItem =prompt('수정 내용을 입력하세요');
-       
-            this.$emit('updateTodo',updateItem,index);//이벤트명  removeTodo
+            let updateItem =prompt('수정 내용을 입력하세요');
+            this.$emit('updateTodo',updateItem,index);//이벤트명  updateItem
             console.log(updateItem,index);
         }
     }//methods
