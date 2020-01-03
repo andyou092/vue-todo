@@ -2,9 +2,9 @@
     
     <section>  
         <transition-group name="list" tag="ul">
-            <li v-for="(todoItem,index) in propsdata" :key="todoItem" class="shadow" > 
+            <li v-for="(todoItem,index) in propsdata" :key="index" class="shadow" > 
                 <i class="checkBtn fa fa-check" aria-hidden="true"></i>
-                    <span class="todoList">{{index+1}} : {{ todoItem }}</span> <!--리스트 데이터 -->
+                    <span class="todoListli">{{index+1}} : {{ todoItem }}</span> <!--리스트 데이터 -->
                 <span class="updateBtn" type="button" @click="updateTodo(todoItem, index)">
                      <i class="checkBtn fas fa-wrench" aria-hidden="true"></i>     
                 </span>        
@@ -25,16 +25,17 @@ export default {
     methods:{
         removeTodo(todoItem,index){
     //        alert('todoList의 removeTodo의 todoItem, index:',index);
+            this.$store.commit('todoD');
             this.$emit('removeTodo',todoItem,index);//이벤트명  removeTodo
             
         },
         updateTodo(todoItem,index){
             let updateItem =prompt('수정 내용을 입력하세요');
-            alert(updateItem);
             if(updateItem !==null){
-                alert('값이 들어왔다');
-              this.$emit('updateTodo',updateItem,index);//이벤트명  updateItem
-            console.log(updateItem,index);  
+                alert('값이 들어왔다'+ updateItem);
+                this.$store.commit('todoU')
+                this.$emit('updateTodo',updateItem,index);//이벤트명  updateItem
+                console.log(updateItem,index);  
             }else if(updateItem==null){
                 alert('입력값이 필요합니다.');
             }
@@ -65,7 +66,7 @@ export default {
         background: white;
         border-radius: 5px;
     }
-    .todoList{
+    .todoListli{
        
         width: 90%;
         text-align: left;

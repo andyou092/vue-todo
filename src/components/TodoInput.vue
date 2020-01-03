@@ -40,8 +40,6 @@ export default {
     //          alert('TODO Info의 else')
               this.showModal = !this.showModal;
           } 
-      
-
         },
         clearInput(){//text란을 초기화 해주기 위해서.
             this.newTodoItem='';
