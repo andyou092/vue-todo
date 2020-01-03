@@ -24,14 +24,20 @@ export default {
     props:['propsdata'],   //Vue컴포넌트에서 v-bind:propsdata="todoItems" 이렇게해서 데이터를 보낸것을 받고 이것을 템플레이트에서 활용하여 List를 출력한다. 
     methods:{
         removeTodo(todoItem,index){
-            alert('todoList의 removeTodo의 todoItem, index:',index);
+    //        alert('todoList의 removeTodo의 todoItem, index:',index);
             this.$emit('removeTodo',todoItem,index);//이벤트명  removeTodo
             
         },
         updateTodo(todoItem,index){
             let updateItem =prompt('수정 내용을 입력하세요');
-            this.$emit('updateTodo',updateItem,index);//이벤트명  updateItem
-            console.log(updateItem,index);
+            if(updateItem !== ""){
+              this.$emit('updateTodo',updateItem,index);//이벤트명  updateItem
+            console.log(updateItem,index);  
+            }else{
+                alert('입력값이 필요합니다.');
+              //  history.back();
+            }
+            
         }
     }//methods
 }

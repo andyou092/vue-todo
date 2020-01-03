@@ -30,15 +30,14 @@ export default {
     methods:{
         addTodo(){//setItem은 로컬 스토리지에 데이터를 추가하는 API이다.
            if(this.newTodoItem !== ""){
-            alert('TODO Info의 if')
+    //        alert('TODO Info의 if')
               var value = this.newTodoItem && this.newTodoItem.trim();
-                this.$emit('addTodo',value);
+            //localStorage.setItem('todoItem',value);
                 this.$store.commit('todoC')
-                //this.$store.commit('listCount')
-                //localStorage.setItem('todoItem',newTodoItem);
+                this.$emit('addTodo',value);
                 this.clearInput();
           }else{
-              alert('TODO Info의 else')
+    //          alert('TODO Info의 else')
               this.showModal = !this.showModal;
           } 
       
