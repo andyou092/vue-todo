@@ -1,7 +1,7 @@
 <template>
     
     <section>  
-        <transition-group name="list" tag="ul">
+        <!-- <transition-group name="list" tag="ul"> -->
             <li v-for="(todoItem,index) in propsdata" :key="index" class="shadow" > 
                 <i class="checkBtn fa fa-check" aria-hidden="true"></i>
                     <span class="todoListli">{{index+1}} : {{ todoItem }}</span> <!--리스트 데이터 -->
@@ -12,7 +12,7 @@
                     <i class="checkBtn fa fa-times" aria-hidden="true"></i>   
                 </span>
             </li>
-        </transition-group>    
+        <!-- </transition-group>     -->
     </section>
    
     
@@ -25,20 +25,22 @@ export default {
     methods:{
         removeTodo(todoItem,index){
     //        alert('todoList의 removeTodo의 todoItem, index:',index);
+            console.log('TodoList의 deleteTodo들어온다.');
             this.$store.commit('todoD');
+            console.log('TodoList의 deleteTodo COMMIT');
             this.$emit('removeTodo',todoItem,index);//이벤트명  removeTodo
-            
         },
         updateTodo(todoItem,index){
+            console.log('TodoList의 updateTodo들어온다.');
+            this.$store.commit('todoU')//true
             let updateItem =prompt('수정 내용을 입력하세요');
-            if(updateItem !==null){
-                alert('값이 들어왔다'+ updateItem);
-                this.$store.commit('todoU')//true
-                this.$emit('updateTodo',updateItem,index);//이벤트명  todolist에 이벤트를 발생시켜서 값을 보내라.updateItem
-                console.log(updateItem,index);  
-            }else if(updateItem==null){
-                alert('입력값이 필요합니다.');
-            }
+                if(updateItem !==null){
+                    alert('값이 들어왔다'+ updateItem);
+                    this.$emit('updateTodo',updateItem,index);//이벤트명  todolist에 이벤트를 발생시켜서 값을 보내라.updateItem
+                    console.log('emit후 updateItem : '+updateItem + 'index'+index);  
+                }else if(updateItem==null){
+                    alert('입력값이 필요합니다.');
+                }
             
         }
     }//methods

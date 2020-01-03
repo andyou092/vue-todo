@@ -2,7 +2,7 @@
     <div>
         <TodoInput v-on:addTodo="addTodo"></TodoInput><!--TodoInput 컴포넌트에 있는 template, method와 연결이 되어 있는데 그것들이 활용이 되면 Vue.js로 와서 methods에 있는 addTodo(todoItem)에 데이터를 보내라. 데이터를 여기서 관리하기 위해서  -->
          <h3>|할일 개수 : {{this.$store.state.listCount}}개 |</h3>        
-        <TodoList id="list" v-bind:propsdata=todoItems @removeTodo="removeTodo" @updateTodo="updateTodo"></TodoList><!--list는 props를 통해 상위에서 하위로 데이터를 전달하기 위해서   /지우기 위해서 하위 컴포넌트에서 상위 컴포넌트로 이벤트를 전달하기 위해서 이벤트 발생시킨것을 수신하는것이다.. -->
+        <TodoList id="list" v-bind:propsdata="todoItems" @removeTodo="removeTodo" @updateTodo="updateTodo"></TodoList><!--list는 props를 통해 상위에서 하위로 데이터를 전달하기 위해서   /지우기 위해서 하위 컴포넌트에서 상위 컴포넌트로 이벤트를 전달하기 위해서 이벤트 발생시킨것을 수신하는것이다.. -->
         <!-- <TodoList id="list" v-bind:propsdata="todoItems1" @removeTodo="removeTodo" @updateTodo="updateTodo"></TodoList> -->
         <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
     </div>
@@ -25,16 +25,20 @@ export default {
     data(){//데이터 배열로 초기화 지정
         return{
             todoItems:[]//데이터 가방
-           
         }
     },
     created(){
         alert('created들어온다.')
-        if(localStorage.length<=this.$store.state.listCount+1){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
-            alert('ocalStorage.length<=this.$store.state.listCount : '+localStorage.length<=this.$store.state.listCount)
-            for(let i =1; i<= this.$store.state.listCount; i++){  
+        //if(localStorage.length<=this.$store.state.listCount){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
+         if(localStorage.length>0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
+         // 123   13   =  0,1                            /3     2    
+           for(let i =0; i< this.$store.state.listCount; i++){  
+              //this.todoItems.push(localStorage.key(i));
+              alert('localStorage.length : '+ localStorage.length);
                 let getValue = localStorage.getItem(i);
+                alert('localStorage.getItem(i) : '+ localStorage.getItem(i)+ " i는 : "+ i );
                 this.todoItems.push(getValue);
+             
                 console.log(this.$store.state.listCount+'입니다.');
             }
         }else{
@@ -47,18 +51,22 @@ export default {
         todoItems: function (newVal) {
         //add
             if(this.$store.state.todoC){                
+                console.log('watch add 들어왔다.')
                 this.$store.commit('listCount')
                 this.$store.commit('disTodoC')
         //update
             }else if(this.$store.state.todoU){
+                console.log('watch update 들어왔다.')
+                
                 this.$store.commit('disTodoU');
         //delete
             }else if(this.$store.state.todoD){
-              //alert('watch delete 들어왔다.')
+                console.log('watch delete 들어왔다.')
                 this.$store.commit('disTodoD')
                 this.$store.commit('disListCount')
          //allDelete  
            }else if(this.$store.state.todoAD) {
+                console.log('watch allDelte 들어왔다.')
                 this.$store.state.todoAD=false;
             }else{
                alert('다시 확인 해주시길 바랍니다.');
@@ -66,10 +74,9 @@ export default {
         }//todoItems
     },
     methods:{
-
         addTodo(todoItem){//Todo add   
-            localStorage.setItem(this.$store.state.listCount+1,todoItem);//key, value
-            let aTGetValue = localStorage.getItem(this.$store.state.listCount+1,todoItem);
+            localStorage.setItem(this.$store.state.listCount,todoItem);//key, value
+            let aTGetValue = localStorage.getItem(this.$store.state.listCount,todoItem);
             this.todoItems.push(aTGetValue);
             console.log(localStorage.length)
         },
@@ -79,22 +86,26 @@ export default {
             this.$store.commit('allDisTodoItems')
         },
         removeTodo(todoItem,index){//Todo selectItemRemove
-          //alert('todolist의 removeTodo의 인자값 : '+todoItem+'index는 : ' + index);
+          alert('todolist의 removeTodo의 인자값 : '+todoItem+'index는 : ' + index);
+            console.log('todolist의 removeTodo에 들어왔다');
+          //  let aa = this.todoItems.indexOf(index,0);
+          console.log('this.todoItem은 : '+ todoItem)
+            localStorage.removeItem(todoItem);    
+            this.todoItems.splice(index,1);
+            //localStorage.push(index,aa);
+            /* for(let j=0; j<localStorage.length ;j++){
+                alert(j+'는'+localStorage.getItem(j))
+            }; */
+           //     localStorage.splice(index,1);       
           
-          this.todoItems.splice(index,1);
-          //   alert(localStorage.removeItem(index));
-            localStorage.removeItem(index);
-            
+                    
+              alert('todolist의 removeTodo의 localStorage.length : '+ localStorage.length );
         },
         updateTodo(todoItem,index){//Todo update
-           alert('updateTodo index값' + index);
-             this.$store.commit('todoU');
-            localStorage.setItem(index,todoItem);
+        console.log('updateTodo index값' + index + 'todoItem : '+ todoItem);
             this.todoItems.splice(index,1,todoItem);
-              alert('update index는' + index);
-              
-           //alert('update 값' + uTGetValue);
-           
+            localStorage.setItem(index,todoItem);           
+            alert('update index는' + index); 
         },
         historyBack(){
             history.back();

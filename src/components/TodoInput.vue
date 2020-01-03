@@ -32,7 +32,7 @@ export default {
            if(this.newTodoItem !== ""){
     //        alert('TODO Info의 if')
               var value = this.newTodoItem && this.newTodoItem.trim();
-            //localStorage.setItem('todoItem',value);
+
                 this.$store.commit('todoC')
                 this.$emit('addTodo',value);
                 this.clearInput();

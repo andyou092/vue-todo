@@ -72,8 +72,9 @@ const store = new Vuex.Store ({
             return    state.todoU = false;
         },
         todoD(state){//추가를 하는 과정      
+            
             return    state.todoD = true;
-        },
+        },  
         disTodoD(state){//로그인 안된상태
             
             return    state.todoD = false;
