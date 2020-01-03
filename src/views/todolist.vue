@@ -29,10 +29,7 @@ export default {
         }
     },
     created(){
-       //alert('created this.$store.state.listCount는'+this.$store.state.listCount);
-       //localStorage.length >2
-    //   alert('created들어온다');
-        //if(this.$store.state.listCount <this.todoItems+1
+        alert('created들어온다.')
         if(localStorage.length<=this.$store.state.listCount+1){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
             alert('ocalStorage.length<=this.$store.state.listCount : '+localStorage.length<=this.$store.state.listCount)
             for(let i =1; i<= this.$store.state.listCount; i++){  
@@ -50,33 +47,21 @@ export default {
         todoItems: function (newVal) {
         //add
             if(this.$store.state.todoC){                
-              //alert('watch add 들어왔다.')
                 this.$store.commit('listCount')
-    //            alert(localStorage.length+'로컬 크기')
-              //alert('watch add commit listCount 값'+ this.$store.state.listCount)
                 this.$store.commit('disTodoC')
-              //alert('watch add commit todoC 값'+ this.$store.state.todoC)
         //update
             }else if(this.$store.state.todoU){
-              //alert('watch update 들어왔다.')  
-              
                 this.$store.commit('disTodoU');
-              //alert('watch update commit todoU 값'+ this.$store.state.todoU)
         //delete
             }else if(this.$store.state.todoD){
               //alert('watch delete 들어왔다.')
                 this.$store.commit('disTodoD')
                 this.$store.commit('disListCount')
-     //           alert('watch delete commit listCount 값'+ this.$store.state.listCount)
-              //alert('watch delete commit todoD 값'+ this.$store.state.todoD)
          //allDelete  
            }else if(this.$store.state.todoAD) {
-              //alert('watch allDelete 들어왔다.')
-              //alert('watch allDelete commit listCount 값'+ this.$store.state.listCount)
                 this.$store.state.todoAD=false;
-              //alert('watch allDelete commit todoC 값'+ this.$store.state.todoAD)
             }else{
-    //           alert('다시 확인 해주시길 바랍니다.');
+               alert('다시 확인 해주시길 바랍니다.');
             }    
         }//todoItems
     },

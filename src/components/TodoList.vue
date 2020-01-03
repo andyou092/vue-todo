@@ -33,8 +33,8 @@ export default {
             let updateItem =prompt('수정 내용을 입력하세요');
             if(updateItem !==null){
                 alert('값이 들어왔다'+ updateItem);
-                this.$store.commit('todoU')
-                this.$emit('updateTodo',updateItem,index);//이벤트명  updateItem
+                this.$store.commit('todoU')//true
+                this.$emit('updateTodo',updateItem,index);//이벤트명  todolist에 이벤트를 발생시켜서 값을 보내라.updateItem
                 console.log(updateItem,index);  
             }else if(updateItem==null){
                 alert('입력값이 필요합니다.');
