@@ -4,7 +4,7 @@
         <transition-group name="list" tag="ul">
             <li v-for="(todoItem,index) in propsdata" :key="todoItem" class="shadow" > 
                 <i class="checkBtn fa fa-check" aria-hidden="true"></i>
-                    <span>{{index+1}} : {{ todoItem }}</span> <!--리스트 데이터 -->
+                    <span class="todoList">{{index+1}} : {{ todoItem }}</span> <!--리스트 데이터 -->
                 <span class="updateBtn" type="button" @click="updateTodo(todoItem, index)">
                      <i class="checkBtn fas fa-wrench" aria-hidden="true"></i>     
                 </span>        
@@ -30,12 +30,13 @@ export default {
         },
         updateTodo(todoItem,index){
             let updateItem =prompt('수정 내용을 입력하세요');
-            if(updateItem !== ""){
+            alert(updateItem);
+            if(updateItem !==null){
+                alert('값이 들어왔다');
               this.$emit('updateTodo',updateItem,index);//이벤트명  updateItem
             console.log(updateItem,index);  
-            }else{
+            }else if(updateItem==null){
                 alert('입력값이 필요합니다.');
-              //  history.back();
             }
             
         }
@@ -53,6 +54,8 @@ export default {
         text-align: left;
     }
     li {
+       
+        width: 98.5%;
         display: flex;
         min-height: 50px;
         height: 50px;
@@ -62,20 +65,29 @@ export default {
         background: white;
         border-radius: 5px;
     }
+    .todoList{
+       
+        width: 90%;
+        text-align: left;
+    }
     .checkBtn {
         line-height: 45px;
         color: #62acde;
         margin-right: 5px;
     }
     .updateBtn{
-        padding-left: 80%;
+        margin-right: 10px;
+        padding-right:  10px;
         line-height: 45px;
         color: #62acde;
-        margin-right: 5px;
+        margin-left:auto;
+        
     }
     .removeBtn {
+        
         margin-left: auto;
         color: #de4343;
+        margin-right: 5px;
     }
     .list-item{
         display: inline-block;

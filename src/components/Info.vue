@@ -36,7 +36,7 @@ export default{
         margin-top: 5%;
         margin-left: 35%;
         width: 30%;
-        border:3px solid rgb(63, 78, 97);;
+        border:3px solid rgb(63, 78, 97);
     }
 
 
