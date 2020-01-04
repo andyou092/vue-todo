@@ -29,7 +29,7 @@ export default {
         }
     },
     created(){
-        alert('created들어온다.')
+        console.log('created들어온다.');
         if(localStorage.length>0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.  
             for(let i =0; i< this.$store.state.listCount; i++){ 
             let getValue = localStorage.getItem(i);//0,1,2,3
