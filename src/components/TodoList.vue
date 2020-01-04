@@ -35,7 +35,7 @@ export default {
             this.$store.commit('todoU')//true
             let updateItem =prompt('수정 내용을 입력하세요');
                 if(updateItem !==null){
-                    alert('값이 들어왔다'+ updateItem);
+                    console.log('TodoList updateTodo에 들어온 값 : '+ updateItem);
                     this.$emit('updateTodo',updateItem,index);//이벤트명  todolist에 이벤트를 발생시켜서 값을 보내라.updateItem
                     console.log('emit후 updateItem : '+updateItem + 'index'+index);  
                 }else if(updateItem==null){

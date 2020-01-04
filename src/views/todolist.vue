@@ -25,26 +25,22 @@ export default {
     data(){//데이터 배열로 초기화 지정
         return{
             todoItems:[]//데이터 가방
+            ,removeTodoIndex:0
         }
     },
     created(){
         alert('created들어온다.')
-        //if(localStorage.length<=this.$store.state.listCount){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
-         if(localStorage.length>0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
-         // 123   13   =  0,1                            /3     2    
-           for(let i =0; i< this.$store.state.listCount; i++){  
-              //this.todoItems.push(localStorage.key(i));
-              alert('localStorage.length : '+ localStorage.length);
-                let getValue = localStorage.getItem(i);
-                alert('localStorage.getItem(i) : '+ localStorage.getItem(i)+ " i는 : "+ i );
-                this.todoItems.push(getValue);
-             
-                console.log(this.$store.state.listCount+'입니다.');
-            }
-        }else{
-               alert('다시 확인해주세요');
-               
-        } 
+        if(localStorage.length>0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.  
+            for(let i =0; i< this.$store.state.listCount; i++){ 
+            let getValue = localStorage.getItem(i);//0,1,2,3
+            this.todoItems.push(getValue);
+            console.log('created this.$store.state.listCount'+this.$store.state.listCount+'이다.');
+            }//for
+               // }//else
+            this.$store.commit("disTodoD");
+        }else{//if
+               alert('다시 확인해주세요');      
+        }//else 
         
     },
     watch:{
@@ -62,14 +58,16 @@ export default {
         //delete
             }else if(this.$store.state.todoD){
                 console.log('watch delete 들어왔다.')
-                this.$store.commit('disTodoD')
                 this.$store.commit('disListCount')
+                
+                this.$store.commit('disTodoD')
          //allDelete  
            }else if(this.$store.state.todoAD) {
-                console.log('watch allDelte 들어왔다.')
+                console.log('watch allDelte 들어왔다.');
+
                 this.$store.state.todoAD=false;
             }else{
-               alert('다시 확인 해주시길 바랍니다.');
+               console.log('watch else 들어왔다..');
             }    
         }//todoItems
     },
@@ -86,26 +84,21 @@ export default {
             this.$store.commit('allDisTodoItems')
         },
         removeTodo(todoItem,index){//Todo selectItemRemove
-          alert('todolist의 removeTodo의 인자값 : '+todoItem+'index는 : ' + index);
+            this.$store.commit('todoD');
             console.log('todolist의 removeTodo에 들어왔다');
-          //  let aa = this.todoItems.indexOf(index,0);
-          console.log('this.todoItem은 : '+ todoItem)
-            localStorage.removeItem(todoItem);    
+            console.log('this.todoItem은 : '+ todoItem)
             this.todoItems.splice(index,1);
-            //localStorage.push(index,aa);
-            /* for(let j=0; j<localStorage.length ;j++){
-                alert(j+'는'+localStorage.getItem(j))
-            }; */
-           //     localStorage.splice(index,1);       
-          
-                    
-              alert('todolist의 removeTodo의 localStorage.length : '+ localStorage.length );
+            localStorage.removeItem(index); //0,1,2,{3},4      index : 3
+            for(let i=index; i<=this.todoItems.length;i++){
+                localStorage.setItem(i,this.todoItems[i]);// 3 / 전
+            }//for
+                 
+            localStorage.removeItem(localStorage.length); //0,1,2,{},4  
         },
         updateTodo(todoItem,index){//Todo update
         console.log('updateTodo index값' + index + 'todoItem : '+ todoItem);
             this.todoItems.splice(index,1,todoItem);
             localStorage.setItem(index,todoItem);           
-            alert('update index는' + index); 
         },
         historyBack(){
             history.back();
