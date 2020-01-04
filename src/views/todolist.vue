@@ -47,24 +47,21 @@ export default {
         todoItems: function (newVal) {
         //add
             if(this.$store.state.todoC){                
-                console.log('watch add 들어왔다.')
-                this.$store.commit('listCount')
-                this.$store.commit('disTodoC')
+                console.log('watch add 들어왔다.');
+                this.$store.commit('listCount');
+                this.$store.commit('disTodoC');
         //update
             }else if(this.$store.state.todoU){
-                console.log('watch update 들어왔다.')
-                
+                console.log('watch update 들어왔다.');
                 this.$store.commit('disTodoU');
         //delete
             }else if(this.$store.state.todoD){
                 console.log('watch delete 들어왔다.')
-                this.$store.commit('disListCount')
-                
-                this.$store.commit('disTodoD')
+                this.$store.commit('disListCount');
+                this.$store.commit('disTodoD');
          //allDelete  
            }else if(this.$store.state.todoAD) {
                 console.log('watch allDelte 들어왔다.');
-
                 this.$store.state.todoAD=false;
             }else{
                console.log('watch else 들어왔다..');
@@ -91,9 +88,8 @@ export default {
             localStorage.removeItem(index); //0,1,2,{3},4      index : 3
             for(let i=index; i<=this.todoItems.length;i++){
                 localStorage.setItem(i,this.todoItems[i]);// 3 / 전
-            }//for
-                 
-            localStorage.removeItem(localStorage.length); //0,1,2,{},4  
+            }//for      
+            localStorage.removeItem(localStorage.length); //0,1,2,4,{null}  
         },
         updateTodo(todoItem,index){//Todo update
         console.log('updateTodo index값' + index + 'todoItem : '+ todoItem);
