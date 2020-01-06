@@ -11,9 +11,9 @@
     <router-link to="/todolist">Todolist보기</router-link> |
     <router-link to="/counter">Counter</router-link> |
     <router-link to="/network">Network</router-link> |
-    <router-link to="/eventTest">EventTest</router-link> |
+    <router-link to="/eventTest">EventExample</router-link> |
     <button class="historyBack" @click="historyBack">돌아가기</button>
-    <router-link to="/vue" tag="button" class="homeBtn">홈</router-link>
+    <router-link to="/" tag="button" class="homeBtn">홈</router-link>
     <router-view></router-view> 
      
     </div>
@@ -38,21 +38,20 @@ export default{
     name:'home',
     data(){//데이터 배열로 초기화 지정
         return{
-            todoItems:[]//데이터 가방         
+           // todoItems:[]//데이터 가방         
         }
     },
     methods:{
-       
         historyBack(){
             history.back();
         }    
     },
     created(){
-        if(localStorage.length >0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
-            for(let i =0; i< localStorage.length;i++){
-                this.todoItems.push(localStorage.key(i));
-            }
-        }
+   //     if(localStorage.length >0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.
+   //         for(let i =0; i< localStorage.length;i++){
+   //             this.todoItems.push(localStorage.key(i));
+  //          }
+  //      }
     },
     components: {//component를 등록해랏!
         'TodoHeader': TodoHeader

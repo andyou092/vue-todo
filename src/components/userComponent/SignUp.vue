@@ -26,8 +26,8 @@ export default {
     methods:{
          signUp:function() {
              //createUserWithEmailAndPassword 메소드는 onResolve, onReject 콜백과 파이어베이스의 프로미스를 반환해준다.
-            firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
-                function(user) {
+            firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(//ES06
+                function(user) {//표현식이다
                     alert('회원가입 완료!')
                 },
                 function(err) {

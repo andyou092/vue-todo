@@ -2,6 +2,9 @@
     
     <section>  
         <!-- <transition-group name="list" tag="ul"> -->
+           <!--정적 props 테스트  -->
+            <!-- <p> {{ propsTest }} </p> -->
+            
             <li v-for="(todoItem,index) in propsdata" :key="index" class="shadow" > 
                 <i class="checkBtn fa fa-check" aria-hidden="true"></i>
                     <span class="todoListli">{{index+1}} : {{ todoItem }}</span> <!--리스트 데이터 -->
@@ -20,8 +23,9 @@
 
 <script>
 export default {
+    props:['propsdata','propsTest'],
    
-    props:['propsdata'],   //Vue컴포넌트에서 v-bind:propsdata="todoItems" 이렇게해서 데이터를 보낸것을 받고 이것을 템플레이트에서 활용하여 List를 출력한다. 
+      //Vue컴포넌트에서 v-bind:propsdata="todoItems" 이렇게해서 데이터를 보낸것을 받고 이것을 템플레이트에서 활용하여 List를 출력한다. 
     methods:{
         removeTodo(todoItem,index){
     //        alert('todoList의 removeTodo의 todoItem, index:',index);

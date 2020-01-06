@@ -44,10 +44,12 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-
-
-
-
+//전역 컴포넌트 등록
+/* 
+Vue.component('my-component', {
+  // 옵션
+})
+ */
 new Vue({
   el: ('#app'),
   router,
