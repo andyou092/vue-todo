@@ -80,7 +80,7 @@ export default{
     }
     .historyBack{
         
-         background-color:  #2F3B52; /* Green */
+        background-color:  #2F3B52; /* Green */
         border: none;
         color: white;
         padding: 2px 10px;

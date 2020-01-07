@@ -1,8 +1,15 @@
 
 <template>
+
+
+
+
+
         <div>
-         <h3>이벤트 리스너와 수식어</h3> 
-        <h4>v-on 디렉티브를 사용하여 DOM 이벤트를 듣고 트리거 될 때 JavaScript를 실행할 수 있습니다.</h4>
+
+
+         <h2>이벤트 리스너와 수식어</h2> 
+        <p>v-on 디렉티브를 사용하여 DOM 이벤트를 듣고 트리거 될 때 JavaScript를 실행할 수 있습니다.</p>
        
         
       <pre>
@@ -29,7 +36,7 @@
           })
         </code>
       </pre>
-      <h4>결과</h4>
+      <h3>결과:</h3>
       <div id="example-1" class="demo">
         <button v-on:click="counter += 1">Add 1</button>
         <p>위 버튼을 클릭한 횟수는 {{ counter }} 번 입니다.</p>
@@ -63,7 +70,7 @@
 
 <span class="hljs-comment">// 또한 JavaScript를 이용해서 메소드를 호출할 수 있습니다.</span>
 example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></code></pre>
-<p>결과:</p>
+<h3>결과:</h3>
 <div id="example-2" class="demo">
   <button v-on:click="greet">Greet</button>
 </div>
@@ -83,7 +90,7 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
     &#125;
   &#125;
 &#125;)</code></pre>
-<p>결과:</p>
+<h3>결과:</h3>
 
 <div id="example-2" class="demo">
   <button v-on:click="say('hi')">Say hi</button>
@@ -102,11 +109,12 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
     alert(message)
   &#125;
 &#125;</code></pre>
-
-<button v-on:click="warn('Form cannot be submitted yet.', $event)">
+<h3>결과:</h3>
+<div class="demo">
+<button    v-on:click="warn('Form cannot be submitted yet.', $event)">
   Submit
 </button>
-
+</div>
 <p>때로 인라인 명령문 핸들러에서 원본 DOM 이벤트에 액세스 해야할 수도 있습니다. 특별한 <code>$event</code> 변수를 사용해 메소드에 전달할 수도 있습니다.</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">"warn('Form cannot be submitted yet.', $event)"</span>&gt;</span>
   Submit
@@ -119,11 +127,12 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
     alert(message)
   &#125;
 &#125;</code></pre>
-
+<h3>결과:</h3>
+<div class="demo">
 <button v-on:click="warn('Form cannot be submitted yet.', $event)">
   Submit
 </button>
-
+</div>
 <h2 id="이벤트-수식어"><a href="#이벤트-수식어" class="headerlink" title="이벤트 수식어"></a>이벤트 수식어</h2><p>이벤트 핸들러 내부에서 <code>event.preventDefault()</code> 또는 <code>event.stopPropagation()</code>를 호출하는 것은 매우 보편적인 일입니다. 메소드 내에서 쉽게 이 작업을 할 수 있지만, DOM 이벤트 세부 사항을 처리하는 대신 데이터 로직에 대한 메소드만 사용할 수 있으면 더 좋을 것입니다.</p>
 <p>이 문제를 해결하기 위해, Vue는 <code>v-on</code> 이벤트에 <strong>이벤트 수식어</strong>를 제공합니다. 수식어는 점으로 표시된 접미사 입니다.</p>
 <ul>
@@ -174,13 +183,13 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
 
 
 
-<h2 id="키-수식어"><a href="#키-수식어" class="headerlink" title="키 수식어"></a>키 수식어</h2><p>키보드 이벤트를 청취할 때, 종종 공통 키 코드를 확인해야 합니다. Vue는 키 이벤트를 수신할 때 <code>v-on</code>에 대한 키 수식어를 추가할 수 있습니다.</p>
+<h3 id="키-수식어"><a href="#키-수식어" class="headerlink" title="키 수식어"></a>키 수식어</h3><p>키보드 이벤트를 청취할 때, 종종 공통 키 코드를 확인해야 합니다. Vue는 키 이벤트를 수신할 때 <code>v-on</code>에 대한 키 수식어를 추가할 수 있습니다.</p>
 <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- only call `vm.submit()` when the `key` is `Enter` --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-on:keyup.enter</span>=<span class="hljs-string">"submit"</span>&gt;</span></code></pre>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values" target="_blank" rel="noopener"><code>KeyboardEvent.key</code></a>를 통해 노출된 유효 키 이름을 케밥 케이스로 변환하여 수식어로 사용할 수 있습니다.</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-on:keyup.page-down</span>=<span class="hljs-string">"onPageDown"</span>&gt;</span></code></pre>
 <p>위의 예제에서 핸들러는 <code>$event.key === &#39;PageDown&#39;</code> 일 때에만 호출됩니다.</p>
-<h3 id="Key-Codes"><a href="#Key-Codes" class="headerlink" title="Key Codes"></a>Key Codes</h3><p class="tip">The use of <code>keyCode</code> events <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode" target="_blank" rel="noopener">is deprecated</a> and may not be supported in new browsers.</p>
+<h2 id="Key-Codes"><a href="#Key-Codes" class="headerlink" title="Key Codes"></a>Key Codes</h2><p class="tip">The use of <code>keyCode</code> events <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode" target="_blank" rel="noopener">is deprecated</a> and may not be supported in new browsers.</p>
 
 <p>Using <code>keyCode</code> attributes is also permitted:</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-on:keyup.13</span>=<span class="hljs-string">"submit"</span>&gt;</span></code></pre>
@@ -214,7 +223,7 @@ Vue.config.keyCodes.f1 = <span class="hljs-number">112</span></code></pre>
 <blockquote>
 <p>참고 : 매킨토시 키보드에서 meta는 command 키 입니다 (⌘). Windows 키보드에서 meta는 windows 키 (⊞) 입니다. Sun Microsystems 키보드에서 meta는 단색의 다이아몬드 (◆)로 표시됩니다. 특정 키보드의 경우, 특히 MIT 및 Lisp 시스템 키보드와 Knight 키보드, space-cadet 키보드와 같은 제품에는 “META” 레이블이 지정됩니다. Symbolics 키보드에서 메타는 “META” 또는 “Meta”로 표시됩니다.</p>
 </blockquote>
-<p>예제:</p>
+<h3>예제:</h3>
 <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Alt + C --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">input</span> @<span class="hljs-attr">keyup.alt.67</span>=<span class="hljs-string">"clear"</span>&gt;</span>
 
@@ -348,23 +357,64 @@ export default {
 <style scoped>
   button{
     background-color:#2F3B52;; /* Green */
-    border: none;
+    /* border: none; */
     color: white;
     padding: 15px 30px;
-    text-align: center;
+    /* text-align: center; */
     text-decoration: none;
-    display: inline-block;
+/*     display: inline-block; */
     font-size: 16px;
-  }
-  textarea{
-    width: 50%;
-    height: 20%;
+    
+    
+    border:3px solid rgb(97, 63, 65);
   }
   pre{
-    background-color:rgb(251, 253, 255);; /* Green */
+     border:3px solid rgb(63, 78, 97);
+      width: 51%;
+      background-color: rgb(132, 135, 138);
+      text-align: left;
+      color: white;
+  }
+  h2{
+      text-align: left;
+      width: 51%;
+  }
+  h3{
+      text-align: left;
+      width: 51%;
+  }
+  p{
+      text-align: left;
+      width: 51%;
+  }
+  ul{
+      text-align: left;
+  }
+  li{
+      text-align: left;
+  }
+  .demo{
+    margin-left: -80%;
+  }
+  
+ /*  pre{
+    background-color: black;
+  }
+  code{
+     background-color: red;
+     color: white;
+      margin: 0;
+  }
+  p{
+    color: white;
+  } */
+/* 
+  pre{
+    background-color:rgb(251, 253, 255);; 
     text-align: center;
     margin-left: 35%;
     width: 30%;
   }
+   */
 
 </style>

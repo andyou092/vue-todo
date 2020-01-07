@@ -5,6 +5,11 @@ import router from './router'//.js
 import Vuex from 'vuex'//.js
 import store from './store'//폴더에 있는 자원을 사용 하겠다.
 import firebase from 'firebase'
+import VuePrism from 'vue-prism'
+Vue.use(VuePrism)
+import 'prismjs/themes/prism.css'
+
+
 //router를 사용하려면 VueRouter도 같이
 Vue.use(VueRouter)
 Vue.use(router)
@@ -29,6 +34,9 @@ var routerPush = VueRouter.prototype.push
 //팝업 창을 사용해서 로그인하려면 다음과 같이 signInWithPopup을 호출합니다
     
  ///////////////////////////////////// 
+
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDDnksJybwBbhHk_a8dH_dI4VrpJqRNP4Q",
