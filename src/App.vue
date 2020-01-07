@@ -25,6 +25,11 @@
 import TodoHeader from './components/TodoHeader'
 import firebase from 'firebase'
 import { mapState } from 'vuex'
+import Prism from "prismjs";
+
+// languages
+import "prismjs/`components`/prism-bash";
+import "prismjs/components/prism-csharp";
 //var TodoFooter={    //ES5버전으로 할때는 이렇게 해야하지만 별루다.  컴포넌트가 많아질 경우 지저분하고, 유지보수에 단점으로 작용할 것 같다.
 //    template:'<div>ES5버전이다</div>'
 //};
