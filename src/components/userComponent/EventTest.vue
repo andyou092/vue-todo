@@ -65,7 +65,7 @@
 <span class="hljs-comment">// 또한 JavaScript를 이용해서 메소드를 호출할 수 있습니다.</span>
 example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></code></pre>
 <h3>결과:</h3>
-  <div  class="demo">
+  <div id="example-2" class="demo">
     <button v-on:click="greet">Greet</button>
   </div>
 
@@ -86,7 +86,7 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
 &#125;)</code></pre>
 <h3>결과:</h3>
 
-<div  class="demo">
+<div id="example-3" class="demo">
   <button v-on:click="say('hi')">Say hi</button>
   <button v-on:click="say('what')">Say what</button>
 </div>
@@ -267,7 +267,7 @@ Vue.config.keyCodes.f1 = <span class="hljs-number">112</span></code></pre>
 import AddUser from '../userComponent/AddUser'
 
 export default {
-    //el: ('#example-2'), 
+  //el: ('#example-2'), 
     data(){//데이터 배열로 초기화 지정
       return{
           message: '뒤집기 전',
@@ -315,8 +315,8 @@ export default {
     warn1: function (message, event) {
     // 이제 네이티브 이벤트에 액세스 할 수 있습니다
       if (event) event.preventDefault()
-      alert(message)
-      } 
+      alert(message)      
+    }//warn1 
    }
 }//default
 </script>
