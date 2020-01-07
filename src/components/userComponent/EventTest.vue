@@ -1,13 +1,7 @@
 
 <template>
 
-
-
-
-
         <div>
-
-
          <h2>이벤트 리스너와 수식어</h2> 
         <p>v-on 디렉티브를 사용하여 DOM 이벤트를 듣고 트리거 될 때 JavaScript를 실행할 수 있습니다.</p>
        
@@ -71,9 +65,9 @@
 <span class="hljs-comment">// 또한 JavaScript를 이용해서 메소드를 호출할 수 있습니다.</span>
 example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></code></pre>
 <h3>결과:</h3>
-<div id="example-2" class="demo">
-  <button v-on:click="greet">Greet</button>
-</div>
+  <div  class="demo">
+    <button v-on:click="greet">Greet</button>
+  </div>
 
 
 
@@ -92,7 +86,7 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
 &#125;)</code></pre>
 <h3>결과:</h3>
 
-<div id="example-2" class="demo">
+<div  class="demo">
   <button v-on:click="say('hi')">Say hi</button>
   <button v-on:click="say('what')">Say what</button>
 </div>
@@ -272,12 +266,9 @@ Vue.config.keyCodes.f1 = <span class="hljs-number">112</span></code></pre>
 <script>
 import AddUser from '../userComponent/AddUser'
 
-
-
 export default {
-  el: '#example-2',
-  el: '#example-3',
-   data(){//데이터 배열로 초기화 지정
+    //el: ('#example-2'), 
+    data(){//데이터 배열로 초기화 지정
       return{
           message: '뒤집기 전',
            messageArg: '뒤집기 전',
@@ -287,52 +278,47 @@ export default {
       } 
     },     
    methods:{
-     doThis:function(){
-      
-       console.log('마우스가 눌렀어요.')
-        },
-      doThat:function(){
-         
-       console.log('마우스가 땠습니다.')
-     },
-     reverseMessage:function(){
-       this.message= this.message.split('').reverse().join('');
-     },
-      reverseMessageArg:function(arg1){
-       this.messageArg= this.messageArg.split('').reverse().join('')+arg1;
-     },
-     binding:function(){
-       console.log(this.messageForm)
+    doThis:function(){
+      console.log('마우스가 눌렀어요.')
+    },
+    doThat:function(){     
+      console.log('마우스가 땠습니다.')
+    },
+    reverseMessage:function(){
+      this.message= this.message.split('').reverse().join('');
+    },
+    reverseMessageArg:function(arg1){
+      this.messageArg= this.messageArg.split('').reverse().join('')+arg1;
+    },
+    binding:function(){
+      console.log(this.messageForm)
        alert('바뀐 값'+this.messageForm)
-     },
-     greet:function(event){
-       alert('Hello '+ this.name);
+    },
+    greet:function(event){
+      alert('Hello '+ this.name);
        if(event){
           alert(event.target.tagName);
        }//if
-     },
-     warn:function(message,event){
-        if(event)event.preventDefault
-          alert(message);
-        
-     },
-     say: function (message) {
-          alert(message)
-     },
-      warn: function (message, event) {
+    },
+    warn:function(message,event){
+      if(event)event.preventDefault
+        alert(message);
+    },
+    say: function (message) {
+      alert(message)
+    },
+    warn: function (message, event) {
       // 이제 네이티브 이벤트에 액세스 할 수 있습니다
       if (event) event.preventDefault()
       alert(message)
     },
     warn1: function (message, event) {
     // 이제 네이티브 이벤트에 액세스 할 수 있습니다
-    if (event) event.preventDefault()
-    alert(message)
-  }
-       
+      if (event) event.preventDefault()
+      alert(message)
+      } 
    }
-   
-}
+}//default
 </script>
 
 <style scoped>
