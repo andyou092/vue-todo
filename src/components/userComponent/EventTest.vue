@@ -394,7 +394,7 @@ export default {
       text-align: left;
   }
   .demo{
-    margin-left: -80%;
+    margin-left: -52%;
   }
   
  /*  pre{
