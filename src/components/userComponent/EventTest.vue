@@ -122,11 +122,11 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
   &#125;
 &#125;</code></pre>
 <h3>결과:</h3>
-<div class="demo">
+<span class="demo">
 <button v-on:click="warn('Form cannot be submitted yet.', $event)">
   Submit
 </button>
-</div>
+</span>
 <h2 id="이벤트-수식어"><a href="#이벤트-수식어" class="headerlink" title="이벤트 수식어"></a>이벤트 수식어</h2><p>이벤트 핸들러 내부에서 <code>event.preventDefault()</code> 또는 <code>event.stopPropagation()</code>를 호출하는 것은 매우 보편적인 일입니다. 메소드 내에서 쉽게 이 작업을 할 수 있지만, DOM 이벤트 세부 사항을 처리하는 대신 데이터 로직에 대한 메소드만 사용할 수 있으면 더 좋을 것입니다.</p>
 <p>이 문제를 해결하기 위해, Vue는 <code>v-on</code> 이벤트에 <strong>이벤트 수식어</strong>를 제공합니다. 수식어는 점으로 표시된 접미사 입니다.</p>
 <ul>
