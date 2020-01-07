@@ -37,8 +37,6 @@
 
 
 
-
-
 <h2 id="메소드-이벤트-핸들러"><a href="#메소드-이벤트-핸들러" class="headerlink" title="메소드 이벤트 핸들러"></a>메소드 이벤트 핸들러</h2><p>많은 이벤트 핸들러의 로직은 더 복잡할 것이므로, JavaScript를 <code>v-on</code> 속성 값으로 보관하는 것은 간단하지 않습니다. 이 때문에 <code>v-on</code>이 호출하고자 하는 메소드의 이름을 받는 이유입니다.</p>
 <p>예제:</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-2"</span>&gt;</span>
