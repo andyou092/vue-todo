@@ -31,10 +31,10 @@
         </code>
       </pre>
       <h3>결과:</h3>
-      <div id="example-1" class="demo">
+      <span class="demo">
         <button v-on:click="counter += 1">Add 1</button>
         <p>위 버튼을 클릭한 횟수는 {{ counter }} 번 입니다.</p>
-      </div>
+      </span>
 
 
 
@@ -65,9 +65,9 @@
 <span class="hljs-comment">// 또한 JavaScript를 이용해서 메소드를 호출할 수 있습니다.</span>
 example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></code></pre>
 <h3>결과:</h3>
-  <div id="example-2" class="demo">
+  <span  class="demo">
     <button v-on:click="greet">Greet</button>
-  </div>
+  </span>
 
 
 
@@ -86,10 +86,10 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
 &#125;)</code></pre>
 <h3>결과:</h3>
 
-<div id="example-3" class="demo">
+<span class="demo">
   <button v-on:click="say('hi')">Say hi</button>
   <button v-on:click="say('what')">Say what</button>
-</div>
+</span>
 
 <p>때로 인라인 명령문 핸들러에서 원본 DOM 이벤트에 액세스 해야할 수도 있습니다. 특별한 <code>$event</code> 변수를 사용해 메소드에 전달할 수도 있습니다.</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">"warn('Form cannot be submitted yet.', $event)"</span>&gt;</span>
@@ -104,11 +104,11 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
   &#125;
 &#125;</code></pre>
 <h3>결과:</h3>
-<div class="demo">
+<span class="demo">
 <button    v-on:click="warn('Form cannot be submitted yet.', $event)">
   Submit
 </button>
-</div>
+</span>
 <p>때로 인라인 명령문 핸들러에서 원본 DOM 이벤트에 액세스 해야할 수도 있습니다. 특별한 <code>$event</code> 변수를 사용해 메소드에 전달할 수도 있습니다.</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">"warn('Form cannot be submitted yet.', $event)"</span>&gt;</span>
   Submit
@@ -259,7 +259,7 @@ Vue.config.keyCodes.f1 = <span class="hljs-number">112</span></code></pre>
 <h4>출처 : https://kr.vuejs.org/v2/guide/events.html</h4>
 
 <p>---------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
- </div>       
+</div>       
       
 </template>
 
