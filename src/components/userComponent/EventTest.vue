@@ -266,26 +266,7 @@ Vue.config.keyCodes.f1 = <span class="hljs-number">112</span></code></pre>
 
 <p>---------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
  </div>       
-        <!-- <p>한 번에 여러 이벤트와 각각의 리스너 선언 할 수 있다.</p>
-          <button v-on="{mousedown: doThis, mouseup:doThat}">
-             객체로 이벤트 리스너 추가
-          </button>     
-        <p>폼 이벤트 리스너.</p>
-          <button v-on:click="reverseMessage">메시지 뒤집기</button>
-           <p>{{ message }}</p>
-
-          <button v-on:click="reverseMessageArg('인자1')">인자값 추가 메시지 뒤집기</button>
-           <p>{{ messageArg }}</p>
-
-        <p>v-model을 이용한 양방향 바인딩</p>
-        <input type="text" v-model="messageForm" v-on:keyup.enter="binding">
-
-        <p>명시적으로 이벤트 정보 전달</p>
-        <button v-on:click ="greet($event)">Greet</button>
-
-        <p></p>
-        <button v-on:click="warn1('Form cannot be submitted yey.', $event)">Submit</button>
-        </div> -->
+      
 </template>
 
 <script>
@@ -396,25 +377,6 @@ export default {
   .demo{
     margin-left: -52%;
   }
-  
- /*  pre{
-    background-color: black;
-  }
-  code{
-     background-color: red;
-     color: white;
-      margin: 0;
-  }
-  p{
-    color: white;
-  } */
-/* 
-  pre{
-    background-color:rgb(251, 253, 255);; 
-    text-align: center;
-    margin-left: 35%;
-    width: 30%;
-  }
-   */
+ 
 
 </style>
