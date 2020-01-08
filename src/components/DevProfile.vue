@@ -56,13 +56,14 @@ export default{
         float: left;
         margin-left: 35%;
         margin-top: 5%;
-        width: 6%; 
+        width: 12%; 
         list-style-type : none;
         padding-right: 2%;
     }
 
     .info{
         float: left;
+        padding-right: 2%;
         margin-top: 5%;
         width: 300px;
         margin-left: 3%;
