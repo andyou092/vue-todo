@@ -3,8 +3,6 @@
 <div>
          <h2>이벤트 리스너와 수식어</h2> 
         <p>v-on 디렉티브를 사용하여 DOM 이벤트를 듣고 트리거 될 때 JavaScript를 실행할 수 있습니다.</p>
-       
-        
       <pre>
         <p>template</p>
         <code class="hljs html">
