@@ -119,8 +119,13 @@
           Submit
         </button>
         </span>
-        <h2 id="이벤트-수식어"><a href="#이벤트-수식어" class="headerlink" title="이벤트 수식어"></a>이벤트 수식어</h2><p>이벤트 핸들러 내부에서 <code>event.preventDefault()</code> 또는 <code>event.stopPropagation()</code>를 호출하는 것은 매우 보편적인 일입니다. 메소드 내에서 쉽게 이 작업을 할 수 있지만, DOM 이벤트 세부 사항을 처리하는 대신 데이터 로직에 대한 메소드만 사용할 수 있으면 더 좋을 것입니다.</p>
+        <h2 id="이벤트-수식어"><a href="#이벤트-수식어" class="headerlink" title="이벤트 수식어"></a>이벤트 수식어</h2>
+        
+        <p>이벤트 핸들러 내부에서 <code>event.preventDefault()</code> 또는 <code>event.stopPropagation()</code>를 호출하는 것은 매우 보편적인 일입니다. 
+        메소드 내에서 쉽게 이 작업을 할 수 있지만, 
+        DOM 이벤트 세부 사항을 처리하는 대신 데이터 로직에 대한 메소드만 사용할 수 있으면 더 좋을 것입니다.</p>
         <p>이 문제를 해결하기 위해, Vue는 <code>v-on</code> 이벤트에 <strong>이벤트 수식어</strong>를 제공합니다. 수식어는 점으로 표시된 접미사 입니다.</p>
+        
         <ul>
         <li><code>.stop</code></li>
         <li><code>.prevent</code></li>
@@ -129,6 +134,7 @@
         <li><code>.once</code></li>
         <li><code>.passive</code></li>
         </ul>
+      
         <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 클릭 이벤트 전파가 중단됩니다 --&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click.stop</span>=<span class="hljs-string">"doThis"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
@@ -176,11 +182,11 @@
         <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values" target="_blank" rel="noopener"><code>KeyboardEvent.key</code></a>를 통해 노출된 유효 키 이름을 케밥 케이스로 변환하여 수식어로 사용할 수 있습니다.</p>
         <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-on:keyup.page-down</span>=<span class="hljs-string">"onPageDown"</span>&gt;</span></code></pre>
         <p>위의 예제에서 핸들러는 <code>$event.key === &#39;PageDown&#39;</code> 일 때에만 호출됩니다.</p>
-        <h2 id="Key-Codes"><a href="#Key-Codes" class="headerlink" title="Key Codes"></a>Key Codes</h2><p class="tip">The use of <code>keyCode</code> events <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode" target="_blank" rel="noopener">is deprecated</a> and may not be supported in new browsers.</p>
+        <h2 id="Key-Codes"><a href="#Key-Codes" class="headerlink" title="Key Codes"></a>Key Codes</h2><p class="tip">keyCode 이벤트 사용은 더 이상 사용되지 않으며 새 브라우저에서 지원되지 않을 수 있습니다.</p>
 
-        <p>Using <code>keyCode</code> attributes is also permitted:</p>
+        <p>keyCode 속성 사용도 허용된다. :</p>
         <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-on:keyup.13</span>=<span class="hljs-string">"submit"</span>&gt;</span></code></pre>
-        <p>Vue provides aliases for the most commonly used key codes when necessary for legacy browser support:</p>
+        <p>Vue는 레거시 브라우저 지원에 필요할 때 가장 일반적으로 사용되는 키 코드에 대한 별칭을 제공한다. :</p>
         <ul>
         <li><code>.enter</code></li>
         <li><code>.tab</code></li>
@@ -327,13 +333,10 @@ export default {
     text-decoration: none;
 /*     display: inline-block; */
     font-size: 16px;
-    
-    
-    border:3px solid rgb(97, 63, 65);
   }
   pre{
      border:3px solid  rgb(232, 238, 243);
-      width: 60%;
+      width: 55%;
       background-color: rgb(220, 223, 226);
       text-align: left;
       color: rgb(70, 69, 69);
@@ -352,7 +355,7 @@ export default {
   }
   p{
       text-align: left;
-      width: 51%;
+      width: 55%;
       margin-left: 1%;
   }
   ul{
