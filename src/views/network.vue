@@ -4,8 +4,6 @@
         <p>{{res}} </p>
         <button class="axiosBlock" @click.prevent="getData">axios 호출</button>
 
-        </br>
-        </br>
         <button class="axiosBlock1" @click.prevent="fetchData">axios 호출</button>
             <table class="table">
                 <thead class="thead-dark">
