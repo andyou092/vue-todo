@@ -135,26 +135,29 @@
         <li><code>.passive</code></li>
         </ul>
       
-        <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 클릭 이벤트 전파가 중단됩니다 --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click.stop</span>=<span class="hljs-string">"doThis"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <pre>
+          <code class="hljs html"><span class="hljs-comment">&lt;!-- 클릭 이벤트 전파가 중단됩니다 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click.stop</span>=<span class="hljs-string">"doThis"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-        <span class="hljs-comment">&lt;!-- 제출 이벤트가 페이지를 다시 로드 하지 않습니다 --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>=<span class="hljs-string">"onSubmit"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 제출 이벤트가 페이지를 다시 로드 하지 않습니다 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>=<span class="hljs-string">"onSubmit"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
-        <span class="hljs-comment">&lt;!-- 수식어는 체이닝 가능합니다 --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click.stop.prevent</span>=<span class="hljs-string">"doThat"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 수식어는 체이닝 가능합니다 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click.stop.prevent</span>=<span class="hljs-string">"doThat"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-        <span class="hljs-comment">&lt;!-- 단순히 수식어만 사용할 수 있습니다 --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 단순히 수식어만 사용할 수 있습니다 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
-        <span class="hljs-comment">&lt;!-- 이벤트 리스너를 추가할 때 캡처모드를 사용합니다 --&gt;</span>
-        <span class="hljs-comment">&lt;!-- 즉, 내부 엘리먼트를 대상으로 하는 이벤트가 해당 엘리먼트에서 처리되기 전에 여기서 처리합니다. --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-on:click.capture</span>=<span class="hljs-string">"doThis"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 이벤트 리스너를 추가할 때 캡처모드를 사용합니다 --&gt;</span>
+            <span class="hljs-comment">&lt;!-- 즉, 내부 엘리먼트를 대상으로 하는 이벤트가 해당 엘리먼트에서 처리되기 전에 여기서 처리합니다. --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-on:click.capture</span>=<span class="hljs-string">"doThis"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 
-        <span class="hljs-comment">&lt;!-- event.target이 엘리먼트 자체인 경우에만 트리거를 처리합니다 --&gt;</span>
-        <span class="hljs-comment">&lt;!-- 자식 엘리먼트에서는 안됩니다 --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-on:click.self</span>=<span class="hljs-string">"doThat"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+            <span class="hljs-comment">&lt;!-- event.target이 엘리먼트 자체인 경우에만 트리거를 처리합니다 --&gt;</span>
+            <span class="hljs-comment">&lt;!-- 자식 엘리먼트에서는 안됩니다 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-on:click.self</span>=<span class="hljs-string">"doThat"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          </code>
+        </pre>
         <p class="tip">관련 코드가 동일한 순서로 생성되므로 수식어를 사용할 때 순서를 지정하세요. 다시말해 <code>v-on:click.prevent.self</code>를 사용하면 <strong>모든 클릭</strong>을 막을 수 있으며 <code>v-on:click.self.prevent</code>는 엘리먼트 자체에 대한 클릭만 방지합니다.</p>
 
         <blockquote>
@@ -342,7 +345,9 @@ export default {
       text-align: left;
       color: rgb(70, 69, 69);
       margin-left: 1%;
-    
+  }
+  span{
+      width: 100%;
   }
   code{
       width: auto;
