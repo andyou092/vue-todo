@@ -41,7 +41,7 @@ export default {
                // }//else
             this.$store.commit("disTodoD");
         }else{//if
-               alert('다시 확인해주세요');     
+               console.log('데이터가 아직 없습니다.');     
                
                
                
