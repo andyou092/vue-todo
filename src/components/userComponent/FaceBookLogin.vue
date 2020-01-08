@@ -2,7 +2,7 @@
   <div>
     
       <button class="social-button" v-on:click="faceBookLogin">
-      <img alt="faceBookLogin Logo" src="src\assets\facebooklogo.png">
+      <img alt="faceBookLogin Logo" src="assets\facebooklogo.png">
       </button>
     
   </div>

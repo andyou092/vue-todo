@@ -2,7 +2,7 @@
   <div>
     
       <button class="social-button" v-on:click="googleLogin">
-      <img alt="faseBookLogin Logo" src="src\assets\googlelogo.png">
+      <img alt="faseBookLogin Logo" src="\assets\googlelogo.png">
       </button>
     
   </div>
