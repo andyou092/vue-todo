@@ -4,27 +4,22 @@
          <h2>이벤트 리스너와 수식어</h2> 
         <p>v-on 디렉티브를 사용하여 DOM 이벤트를 듣고 트리거 될 때 JavaScript를 실행할 수 있습니다.</p>
       <pre>
-        <p>template</p>
+        
         <code class="hljs html">
+        <p>template</p>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-1"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">"counter += 1"</span>&gt;</span>Add 1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>위 버튼을 클릭한 횟수는 &#123;&#123; counter &#125;&#125; 번 입니다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
       </pre>
       <pre>
+      <p>script</p>
         <code class="hljs js"><span class="hljs-keyword">var</span> example1 = <span class="hljs-keyword">new</span> Vue(&#123;
           <span class="hljs-attr">el</span>: <span class="hljs-string">'#example-1'</span>,
           <span class="hljs-attr">data</span>: &#123;
           <span class="hljs-attr">counter</span>: <span class="hljs-number">0</span>
           &#125;
           &#125;)
-      <p>script</p>
-          var example1 = new Vue({
-            el: '#example-1',
-            data: {
-              counter: 0
-            }
-          })
         </code>
       </pre>
       <h3>결과:</h3>
@@ -166,6 +161,7 @@
         <p>2.3.0+ 이후 추가됨</p>
         </blockquote>
         <p>Vue also offers the <code>.passive</code> modifier, corresponding to <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters" target="_blank" rel="noopener"><code>addEventListener</code>‘s <code>passive</code> option</a>.</p>
+        <p><code>Vue는 addEventListener의 수동 옵션에 해당하는 .passive 수정자를 제공합니다.</code></p>
         <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 스크롤의 기본 이벤트를 취소할 수 없습니다. --&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-on:scroll.passive</span>=<span class="hljs-string">"onScroll"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
         <p>추가로, Vue는 <code>.passive</code> 수식어를 제공합니다. 특히 모바일 환경에서 성능향상에 도움이 됩니다. 예를 들어, 브라우저는 핸들러가 <code>event.preventDefault()</code>를 호출할지 알지 못하므로 프로세스가 완료된 후 스크롤 합니다. <code>.passive</code> 수식어는 이 이벤트가 기본 동작을 멈추지 않는다는 것을 브라우저에 알릴 수 있습니다.</p>
@@ -336,29 +332,36 @@ export default {
     border:3px solid rgb(97, 63, 65);
   }
   pre{
-     border:3px solid rgb(63, 78, 97);
-      width: 51%;
-      background-color: rgb(132, 135, 138);
+     border:3px solid  rgb(232, 238, 243);
+      width: 60%;
+      background-color: rgb(220, 223, 226);
       text-align: left;
-      color: white;
+      color: rgb(70, 69, 69);
+      margin-left: 1%;
+    
   }
   h2{
       text-align: left;
       width: 51%;
+      margin-left: 1%;
   }
   h3{
       text-align: left;
       width: 51%;
+      margin-left: 1%;
   }
   p{
       text-align: left;
       width: 51%;
+      margin-left: 1%;
   }
   ul{
       text-align: left;
+      margin-left: 1%;
   }
   li{
       text-align: left;
+      margin-left: 1%;
   }
   .demo{
     margin-left: -52%;

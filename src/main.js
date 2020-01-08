@@ -8,7 +8,7 @@ import firebase from 'firebase'
 //import VuePrism from 'vue-prism'
 //Vue.use(VuePrism)
 //import 'prismjs/themes/prism.css'
-import VuePrism from 'vue-prism'
+
 
 //router를 사용하려면 VueRouter도 같이
 Vue.use(VueRouter)
@@ -19,7 +19,7 @@ Vue.use(Vuex)
 Vue.use(store)
 Vue.use(firebase)
 
-Vue.use(VuePrism)
+
 var routerPush = VueRouter.prototype.push
 
   VueRouter.prototype.push = function push(location) {
