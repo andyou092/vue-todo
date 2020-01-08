@@ -54,7 +54,7 @@ export default {
 
 <style scoped>
         .inputHeght{
-            height: 40%;
+            height: 38%;
         }
         input:focus {
             outline: none;
