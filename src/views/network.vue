@@ -75,7 +75,7 @@ export default {
     color: white;
     padding: 4px 30px;
     text-decoration: none;  
-    font-size: 14px;
+    font-size: 12px;
     width: 11%;    
   }
   .response{
