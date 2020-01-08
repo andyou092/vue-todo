@@ -5,9 +5,9 @@ import router from './router'//.js
 import Vuex from 'vuex'//.js
 import store from './store'//폴더에 있는 자원을 사용 하겠다.
 import firebase from 'firebase'
-import VuePrism from 'vue-prism'
-Vue.use(VuePrism)
-import 'prismjs/themes/prism.css'
+//import VuePrism from 'vue-prism'
+//Vue.use(VuePrism)
+//import 'prismjs/themes/prism.css'
 
 
 //router를 사용하려면 VueRouter도 같이
