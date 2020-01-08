@@ -33,8 +33,8 @@ export default{
 <style scoped>
     .guide{
         margin-top: 5%;
-        margin-left: 35%;
-        width: 30%;
+        margin-left: auto;
+        width: auto;
         border:3px solid rgb(63, 78, 97);
     }
 </style>

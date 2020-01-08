@@ -4,7 +4,7 @@
         <p>{{res}} </p>
         <button class="axiosBlock" @click.prevent="getData">axios 객체 호출</button>
 
-        <button class="axiosBlock" @click.prevent="fetchData">axios 객체, 배열 호출</button>
+        <button class="axiosBlock1" @click.prevent="fetchData">axios 객체, 배열 호출</button>
             <table class="table">
                 <thead class="thead-dark">
                     <th scope="col">id</th>
@@ -73,10 +73,18 @@ export default {
 .axiosBlock{
     background-color:rgb(63, 78, 97); /* gray */
     color: white;
-    padding: 4px 30px;
+    /* padding: 4px 20px; */
     text-decoration: none;  
-    font-size: 12px;
-    width: 11%;    
+    font-size: 14px;
+    width: auto;  
+  }
+  .axiosBlock1{
+    background-color:rgb(63, 78, 97); /* gray */
+    color: white;
+    /* padding: 4px 20px; */
+    text-decoration: none;  
+    font-size: 14px;
+    width: auto;   
   }
   .response{
         margin-top: 2%;
