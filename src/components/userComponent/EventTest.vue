@@ -274,7 +274,7 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
         </li>
         </ol>
 
-        <h4>출처 : https://kr.vuejs.org/v2/guide/events.html</h4>
+<h4 class="from">출처 : https://kr.vuejs.org/v2/guide/events.html</h4>
         </div>
 </template>
 
@@ -382,6 +382,9 @@ export default {
       text-align: left;
       width: auto;
       margin-left: 33%;
+  }
+  .from{
+    margin-left: auto;
   }
   p{
       text-align: left;
