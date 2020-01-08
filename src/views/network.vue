@@ -2,8 +2,8 @@
     <div>
         <textarea class="response"  v-model="res"/>
         <!-- <p>{{res}} </p> -->
+        <p></p>
         <button class="axiosBlock" @click.prevent="getData">axios 객체 호출</button>
-
         <button class="axiosBlock1" @click.prevent="fetchData">axios 객체, 배열 호출</button>
           <div class="table_css">
             <table class="table">
