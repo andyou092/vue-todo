@@ -1,7 +1,9 @@
 <template>
     <div>
         <TodoInput v-on:addTodo="addTodo"></TodoInput><!--TodoInput 컴포넌트에 있는 template, method와 연결이 되어 있는데 그것들이 활용이 되면 Vue.js로 와서 methods에 있는 addTodo(todoItem)에 데이터를 보내라. 데이터를 여기서 관리하기 위해서  -->
+         <div class="listCount">
          <h3>|할일 개수 : {{this.$store.state.listCount}}개 |</h3>        
+         </div>
         <TodoList id="list" propsTest="정적 props테스트"  v-bind:propsdata="todoItems" @removeTodo="removeTodo" @updateTodo="updateTodo"></TodoList><!--list는 props를 통해 상위에서 하위로 데이터를 전달하기 위해서   /지우기 위해서 하위 컴포넌트에서 상위 컴포넌트로 이벤트를 전달하기 위해서 이벤트 발생시킨것을 수신하는것이다.. -->
         <!-- <TodoList id="list" v-bind:propsdata="todoItems1" @removeTodo="removeTodo" @updateTodo="updateTodo"></TodoList> -->
         <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
@@ -122,5 +124,7 @@ export default {
 
 </script>
 <style scoped>
-
+.listCount{
+    margin-top: 2%;
+}
 </style>
