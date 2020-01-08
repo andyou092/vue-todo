@@ -55,6 +55,11 @@ export default {
 <style scoped>
         .inputHeght{
             height: 38%;
+            width: calc(100% - 120px);
+            width: -moz-calc(100% - 120px);          /* => 파폭 */
+            width: -webkit-calc(100% - 120px);      /*  => 크롬 & 사파리 */
+            width: -o-calc(100% - 120px);           /*  => 오페라 */
+            width: -ms-calc(100% - 120px);         /*   => 익스플로러 */
         }
         input:focus {
             outline: none;
@@ -75,6 +80,11 @@ export default {
             display: inline-block;
             width: 3rem;
             border-radius: 0 5px 5px 0;
+            width: -moz-calc(100% - 120px);          /* => 파폭 */
+            width: -webkit-calc(100% - 120px);      /*  => 크롬 & 사파리 */
+            width: -o-calc(100% - 120px);           /*  => 오페라 */
+            width: -ms-calc(100% - 120px);         /*   => 익스플로러 */
+            
         }
         .addBtn {
             color: white;
