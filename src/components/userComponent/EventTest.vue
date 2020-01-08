@@ -337,7 +337,7 @@ export default {
   }
   pre{
      border:3px solid  rgb(232, 238, 243);
-      width: 55%;
+      width: auto;
       background-color: rgb(220, 223, 226);
       text-align: left;
       color: rgb(70, 69, 69);
@@ -346,22 +346,22 @@ export default {
   }
   h2{
       text-align: left;
-      width: 51%;
+      width: auto;
       margin-left: 1%;
   }
   h3{
       text-align: left;
-      width: 51%;
+      width: auto;
       margin-left: 1%;
   }
   h4{
       text-align: left;
-      width: 51%;
+      width: auto;
       margin-left: 33%;
   }
   p{
       text-align: left;
-      width: 55%;
+      width: auto;
       margin-left: 1%;
   }
   ul{
