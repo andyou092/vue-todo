@@ -1,7 +1,7 @@
 <template>
     <div>
         <textarea class="response"  v-model="res"/>
-        <p>{{res}} </p>
+        <!-- <p>{{res}} </p> -->
         <button class="axiosBlock" @click.prevent="getData">axios 객체 호출</button>
 
         <button class="axiosBlock1" @click.prevent="fetchData">axios 객체, 배열 호출</button>
@@ -50,7 +50,7 @@ export default {
               //  let value1 = res.data.id+res.data.title+res.data.completed
               //  return value1
               this.res=JSON.stringify(res.data.title);
-                alert(JSON.stringify(res.data.title));
+               // alert(JSON.stringify(res.data.title));
                 return JSON.stringify(res.data.title);
             }).catch(json => {
                 this.res = json
