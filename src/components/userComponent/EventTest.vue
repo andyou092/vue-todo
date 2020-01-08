@@ -245,11 +245,14 @@
         <li><code>.middle</code></li>
         </ul>
         <p>위 수식어는 특정 마우스 버튼에 의해 트리거 된 이벤트로 핸들러를 제한합니다.</p>
-        <h2 id="왜-HTML로-된-리스너를-사용합니까"><a href="#왜-HTML로-된-리스너를-사용합니까" class="headerlink" title="왜 HTML로 된 리스너를 사용합니까"></a>왜 HTML로 된 리스너를 사용합니까</h2><p>이 모든 이벤트 청취 접근 방법이 우려 사항 분리(“separation of concerns”)에 대한 오래된 규칙을 어긴다고 생각할 수 있습니다. 모든 뷰 핸들러 함수와 표현식은 현재 뷰 처리 하는 ViewModel에 엄격히 바인딩 되기 때문에 유지보수가 어렵지 않습니다. 실제로 <code>v-on</code>을 사용하면 몇가지 이점이 있습니다.</p>
+        <h2 id="왜-HTML로-된-리스너를-사용합니까"><a href="#왜-HTML로-된-리스너를-사용합니까" class="headerlink" title="왜 HTML로 된 리스너를 사용합니까">
+          </a>왜 HTML로 된 리스너를 사용합니까</h2><p>이 모든 이벤트 청취 접근 방법이 우려 사항 분리(“separation of concerns”)에 대한 오래된 규칙을 어긴다고 생각할 수 있습니다. 모든 뷰 핸들러 함수와 표현식은 현재 뷰 처리 하는 ViewModel에 엄격히 바인딩 되기 때문에 유지보수가 어렵지 않습니다. 실제로 <code>v-on</code>을 사용하면 몇가지 이점이 있습니다.</p>
         <ol>
         <li><p>HTML 템플릿을 간단히 하여 JavaScript 코드 내에서 핸들러 함수 구현을 찾는 것이 더 쉽습니다.</p>
         </li>
-        <li><p>JavaScript에서 이벤트 리스너를 수동으로 연결할 필요가 없으므로 ViewModel 코드는 순수 로직과 DOM이 필요하지 않습니다. 이렇게 하면 테스트가 쉬워집니다.</p>
+        <li>
+          <p>JavaScript에서 이벤트 리스너를 수동으로 연결할 필요가 없으므로 ViewModel 코드는 순수 로직과 DOM이 필요하지</p>
+            <p> 않습니다. 이렇게 하면 테스트가 쉬워집니다.</p>
         </li>
         <li><p>ViewModel이 파기되면 모든 이벤트 리스너가 자동으로 제거 됩니다. 이벤트 제거에 대한 걱정이 필요 없어집니다.</p>
         </li>
@@ -350,6 +353,11 @@ export default {
       text-align: left;
       width: 51%;
       margin-left: 1%;
+  }
+  h4{
+      text-align: left;
+      width: 51%;
+      margin-left: 33%;
   }
   p{
       text-align: left;
