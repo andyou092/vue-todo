@@ -82,7 +82,6 @@ example2.greet() <span class="hljs-comment">// =&gt; 'Hello Vue.js!'</span></cod
   &#125;
 &#125;)</code></pre>
 <h3>결과:</h3>
-
         <div class="demo"> 
           <button v-on:click="say('hi')">Say hi</button>
           <button v-on:click="say('what')">Say what</button>
@@ -350,6 +349,7 @@ export default {
     text-decoration: none;
 /*     display: inline-block; */
     font-size: 16px;
+    margin-left: 3%;
   }
   pre{
      border:3px solid  rgb(178, 180, 180);
