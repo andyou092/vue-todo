@@ -349,7 +349,6 @@ export default {
     text-decoration: none;
 /*     display: inline-block; */
     font-size: 16px;
-    margin-left: 3%;
   }
   pre{
      border:3px solid  rgb(178, 180, 180);
@@ -359,49 +358,44 @@ export default {
       color: rgb(70, 69, 69);
       margin-left: 0.02%;
       height:max-content;
-      
   } 
  
   code{
     height:max-content;
-   
-      text-align: left;
-     
+    text-align: left; 
   }
   h2{
-      text-align: left;
-       width: 80%;
-      margin-left: 1%;
+    text-align: left;
+    width: 80%;
+    margin-left: 1%;
   }
   h3{
-      text-align: left;
-       width: 100%;
-      margin-left: 1%;
+    text-align: left;
+      width: 100%;
+    margin-left: 1%;
   }
   h4{
-      text-align: left;
-      width: auto;
-      margin-left: 33%;
+    text-align: left;
+    width: auto;
+    margin-left: 33%;
   }
   .from{
     margin-left: auto;
   }
   p{
-      text-align: left;
-      width: auto;
-      margin-left: 1%;
+    text-align: left;
+    width: auto;
+    margin-left: 1%;
   }
   ul{
-      text-align: left;
-      margin-left: 1%;
+    text-align: left;
+    margin-left: 1%;
   }
   li{
-      text-align: left;
-      margin-left: 1%;
+    text-align: left;
+    margin-left: 1%;
   }
-  .demo{
-    margin-left: -52%;
-  }
+  
  
  
 
