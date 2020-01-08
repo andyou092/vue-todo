@@ -84,16 +84,18 @@ export default {
     }
     .updateBtn{
         margin-right: 10px;
-        padding-right:  10px;
+        padding-left:  0.4%;
+        padding-right:  0.4%;
         line-height: 45px;
         color: #62acde;
         margin-left:auto;
         
     }
     .removeBtn {
+        padding-left:  0.5%;
+        padding-right:  0.3%;
+        margin-left: 1px;
         
-        margin-left: auto;
-        color: #de4343;
         margin-right: 5px;
     }
     .list-item{
