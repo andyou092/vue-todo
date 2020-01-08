@@ -73,7 +73,6 @@ export default {
         border-radius: 5px;
     }
     .todoListli{
-       
         width: 90%;
         text-align: left;
     }
@@ -89,13 +88,11 @@ export default {
         line-height: 45px;
         color: #62acde;
         margin-left:auto;
-        
     }
     .removeBtn {
         padding-left:  0.5%;
         padding-right:  0.3%;
         margin-left: 1px;
-        
         margin-right: 5px;
     }
     .list-item{
@@ -105,13 +102,12 @@ export default {
     .list-move{
         transition: transform 1s;
     }
-
     .list-enter-active, .list-leave-active {
-    transition: all 1s;
+        transition: all 1s;
     }
     .list-enter, .list-leave-to {
-    opacity: 0;
-    transform: translateY(30px);
+        opacity: 0;
+        transform: translateY(30px);
     }
 </style>
 

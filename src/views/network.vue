@@ -2,7 +2,7 @@
     <div>
         <textarea class="response"  v-model="res"/>
         <!-- <p>{{res}} </p> -->
-        </br>
+        <br>
         <button class="axiosBlock" @click.prevent="getData">axios 객체 호출</button>
         <button class="axiosBlock1" @click.prevent="fetchData">axios 객체, 배열 호출</button>
           <div class="table_css">
@@ -94,6 +94,7 @@ export default {
   }
   .table_css{
       margin-top: 3%;
+       border:3px solid rgb(63, 78, 97);
   }
   
 </style>

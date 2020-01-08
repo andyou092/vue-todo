@@ -60,5 +60,6 @@ export default{
 <style scoped>
      table{
         margin-top: 5%;
+         border:3px solid rgb(63, 78, 97);
     }
 </style>
