@@ -337,12 +337,15 @@ export default {
   }
   pre{
      border:3px solid  rgb(232, 238, 243);
-      width: auto;
+      width: 100%;
       background-color: rgb(220, 223, 226);
       text-align: left;
       color: rgb(70, 69, 69);
       margin-left: 1%;
     
+  }
+  code{
+      width: auto;
   }
   h2{
       text-align: left;
