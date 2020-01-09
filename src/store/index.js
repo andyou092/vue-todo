@@ -14,7 +14,8 @@ const store = new Vuex.Store ({
         todoC:false,
         todoU:false,
         todoD:false,
-        todoAD:false
+        todoAD:false,
+        nerworkAuth:false
     },
     mutations: {
         increase(state) {
@@ -44,7 +45,7 @@ const store = new Vuex.Store ({
         },
         loginAuth(state){//로그인상태  true 니까 로그아웃 화면이 나와야한다
             state.email=state.email
-            return    state.loginAuth = true,state.email;
+            return    state.loginAuth = true;
             
         },
         loginEmail(state){//로그인상태  true 니까 로그아웃 화면이 나와야한다
@@ -86,7 +87,14 @@ const store = new Vuex.Store ({
         noDisAllTodoItems(state){
 
             return state.todoAD = false; 
-         }
+        },
+        nerworkAuthTrue(state){
+
+            return state.nerworkAuth=true;
+        },
+        nerworkAuthFalse(state){
+            return state.nerworkAuth=false;
+        }
     },
     actions: {
         increase1: function (state) {

@@ -5,7 +5,7 @@
         <br>
         <button class="axiosBlock" @click.prevent="getData">axios 객체 호출</button>
         <button class="axiosBlock1" @click.prevent="fetchData">axios 객체, 배열 호출</button>
-          <div class="tableCss">
+          <div class="tableCss"  v-show="this.$store.state.nerworkAuth">
             <table class="table">
                 <thead class="thead-dark">
                     <th scope="col">id</th>
@@ -43,12 +43,13 @@ export default {
             response:[]
         }
     },
+    created(){
+          //   this.$store.commit('nerworkAuthTrue');
+             alert(this.$store.state.nerworkAuth);
+    },
     methods: {
         getData:function() {
             axios.get('https://jsonplaceholder.typicode.com/todos/1').then(res => {
-               // let value= JSON.stringify(res.data.id)+JSON.stringify(res.data.title);
-              //  let value1 = res.data.id+res.data.title+res.data.completed
-              //  return value1
               this.res=JSON.stringify(res.data.title);
                // alert(JSON.stringify(res.data.title));
                 return JSON.stringify(res.data.title);
@@ -59,8 +60,9 @@ export default {
     ,
     fetchData: function() {
       axios.get('https://jsonplaceholder.typicode.com/users/').then(response => {
-        
-         this.response= response.data;
+            //alert(this.$store.state.nerworkAuth);
+            this.$store.commit('nerworkAuthTrue');
+            this.response= response.data;
         }).catch(json => {
           console.log(err);
         })

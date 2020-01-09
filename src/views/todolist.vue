@@ -44,9 +44,6 @@ export default {
             this.$store.commit("disTodoD");
         }else{//if
                console.log('데이터가 아직 없습니다.');     
-               
-               
-               
         }//else 
         
     },
@@ -87,7 +84,7 @@ export default {
             console.log(localStorage.length)
 
              var a = 10;
-                for (var a = 0; a < 5; a++) {
+                for (var a = 0; a < 5; a++) {           
                     console.log('for'+a); // 0 1 2 3 4 
                 }
                 console.log('last'+a); // 5
