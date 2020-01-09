@@ -44,15 +44,14 @@ export default {
         }
     },
     created(){
-          //   this.$store.commit('nerworkAuthTrue');
-             alert(this.$store.state.nerworkAuth);
+         this.$store.commit('nerworkAuthFalse');
+        console.log('network created networkAuth'+this.$store.state.nerworkAuth);
     },
     methods: {
         getData:function() {
             axios.get('https://jsonplaceholder.typicode.com/todos/1').then(res => {
               this.res=JSON.stringify(res.data.title);
-               // alert(JSON.stringify(res.data.title));
-                return JSON.stringify(res.data.title);
+            return JSON.stringify(res.data.title);
             }).catch(json => {
                 this.res = json
             })
@@ -60,15 +59,12 @@ export default {
     ,
     fetchData: function() {
       axios.get('https://jsonplaceholder.typicode.com/users/').then(response => {
-            //alert(this.$store.state.nerworkAuth);
             this.$store.commit('nerworkAuthTrue');
             this.response= response.data;
         }).catch(json => {
           console.log(err);
         })
     }//fetchData
-
-
     }//method
 }
     
@@ -77,7 +73,6 @@ export default {
 .axiosBlock{
     background-color:rgb(63, 78, 97); /* gray */
     color: white;
-    /* padding: 4px 20px; */
     text-decoration: none;  
     font-size: 14px;
     width: auto;  
@@ -85,18 +80,17 @@ export default {
   .axiosBlock1{
     background-color:rgb(63, 78, 97); /* gray */
     color: white;
-    /* padding: 4px 20px; */
     text-decoration: none;  
     font-size: 14px;
     width: auto;   
   }
   .response{
-        margin-top: 2%;
+    margin-top: 2%;
   }
   table{
-      margin-top: 3%;
-       border:3px solid rgb(63, 78, 97);
-       width: 100%;
+    margin-top: 3%;
+    border:3px solid rgb(63, 78, 97);
+    width: 100%;
   }
   
 </style>
