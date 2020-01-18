@@ -5,15 +5,15 @@
     <TodoHeader router-link to="/vue" ></TodoHeader>
     
     <!--<router-link to="/user">유저</router-link> |  -->
-    <router-link to="/devProfile">| 개발자 프로필</router-link> |
-    <router-link to="/info" >서비스 소개</router-link> |
-    <router-link to="/guide" >이용 방법</router-link> |
-    <router-link to="/todolist">Todolist보기</router-link> |
-    <router-link to="/counter">Counter</router-link> |
-    <router-link to="/network">Network</router-link> |
-    <router-link to="/eventTest">EventExample</router-link> |
-    <button class="historyBack" @click="historyBack">돌아가기</button>
-    <router-link to="/" tag="button" class="homeBtn">홈</router-link>
+    <router-link to="/devProfile"   type="button" class="btn btn-default">| 개발자 프로필</router-link> |
+    <router-link to="/info"  type="button" class="btn btn-default">서비스 소개</router-link> |
+    <router-link to="/guide" type="button" class="btn btn-default" >이용 방법</router-link> |
+    <router-link to="/todolist" type="button" class="btn btn-default">Todolist보기</router-link> |
+    <router-link to="/counter" type="button" class="btn btn-default">Counter</router-link> |
+    <router-link to="/network" type="button" class="btn btn-default">Network</router-link> |
+    <router-link to="/eventTest" type="button" class="btn btn-default">EventExample</router-link> |
+    <button type="button" class="btn btn-default" @click="historyBack" >돌아가기</button>
+    <router-link to="/"  type="button" class="btn btn-default">홈</router-link>
     <router-view></router-view> 
      
     </div>
@@ -102,13 +102,13 @@ export default{
     .shadow{
         box-shadow: 5px 10px 10px rgba(0,0,0,0.03)
     }
-    .router-link-active {
+   /*  .router-link-active {
         color: white;
         background-color: red;
-    }
-    .router-link-exact-active {
+    } */
+  /*   .router-link-exact-active {
   color: white;
-  background-color: #62acde;;
-}
+  background-color: #62acde;
+} */
 </style>
 

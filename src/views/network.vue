@@ -3,6 +3,7 @@
         <textarea class="response"  v-model="res"/>
         <!-- <p>{{res}} </p> -->
         <br>
+        
         <button class="axiosBlock" @click.prevent="getData">axios 객체 호출</button>
         <button class="axiosBlock1" @click.prevent="fetchData">axios 객체, 배열 호출</button>
           <div class="tableCss"  v-show="this.$store.state.nerworkAuth">

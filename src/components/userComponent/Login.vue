@@ -4,10 +4,14 @@
             <input type="email" v-model="email" placeholder="Email Address">
             <input type="password" v-model="password" placeholder="Password">
             <button class="logBtn" @click="login">로그인</button>         
-            <p>만약  계정이 없다면 </p>
+           <br>
               <span><router-link to="/googlelogin"><img class="googleLogo " src="assets\googlelogo.png"/> </router-link></span><br>
               <span><router-link to="/facebooklogin" ><img class="faceBookLogo" src="assets\faceBookLogo.png"/> </router-link></span><br>
-               <span class="signUp"><router-link to="/signup" >회원가입 </router-link>을 먼저 진행해주세요</span>
+              
+             <span  type="button" class="btn btn-warning"> 
+               <span>계정이 없다면 </span>
+               <router-link to="/signup">회원가입</router-link>
+               </span><br>
            
              
 
@@ -100,7 +104,12 @@ export default {
   }
     img{
       
-      width: 14%;
+      width: 20%;
+    }
+    span{
+      font-size: 11px;
+      width: 20%;
+      font-weight: bold;
     }
    
 </style>
