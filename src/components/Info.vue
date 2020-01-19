@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div class="info" >
         
         <p>안녕하세요.</p> 
         <p>Vue.js를 이용하여 해야할 일을 모아 목록을 만든뒤 관리 기능.</p>
@@ -23,11 +23,11 @@
 //var Guide={templte:'<div><p>메롱1</p></div>'};
 
 export default{
-  data(){
+  //data(){
      // return{
       //  count: 3,
       //  watchedCount: 9}    
-  },
+ // },
   /* computed:{
     // 계산된 getter
     calculated: function () {
