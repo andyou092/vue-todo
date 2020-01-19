@@ -79,7 +79,7 @@ export default {
 
         */
 
-     addTodo(todoItem){//Todo add   
+        addTodo(todoItem){//Todo add   
             localStorage.setItem(this.$store.state.listCount,todoItem);//key, value
             let aTGetValue = localStorage.getItem(this.$store.state.listCount,todoItem);
             this.todoItems.push(aTGetValue);

@@ -7,8 +7,6 @@
           <!-- router-view ></router-view> -->
 
        
-
-
        
      </div>  
 
@@ -22,39 +20,11 @@
 //var Info={templte:'<div><p>메롱</p></div>'};
 //var Guide={templte:'<div><p>메롱1</p></div>'};
 
+
 export default{
-  //data(){
-     // return{
-      //  count: 3,
-      //  watchedCount: 9}    
- // },
-  /* computed:{
-    // 계산된 getter
-    calculated: function () {
-        
-    	if(this.count === 2) {
-      	alert('값이 2가 되었습니다.')
-      }
-      return this.count;
-    }
-  }, */
-/*   watch:{
-     count: function (newVal) {
-    	if(newVal == 0) {
-      	alert('값이 0이 되었습니다.')
-        this.count = 3
-      }
-    }
-  } */
 
 }//default
 
-
-
-//var app = new Vue({
-//router
-//}).$mount('#app');
-  
 </script>
 
 <style scoped>

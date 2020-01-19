@@ -16,6 +16,10 @@ import firebase from 'firebase'
  provider.setCustomParameters({
   'display': 'popup'
 })
+
+
+
+
  
 export default {
   name: 'faceBookLogin',
