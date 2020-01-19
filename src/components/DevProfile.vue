@@ -12,7 +12,7 @@
             </tr>
             <tr> 
                 <th scope="col">나이</th>    
-                <td>28살</td>
+                <td>29살</td>
             </tr>
             <tr scope="row"> 
                 <th scope="col">성별</th>    

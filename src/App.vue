@@ -1,21 +1,18 @@
 <!-- Component의 template를 뷰에 보이기 위해서  -->
 <template>
     <div id="app">
-          
-    <TodoHeader router-link to="/vue" ></TodoHeader>
-    
-    <!--<router-link to="/user">유저</router-link> |  -->
-    <router-link to="/devProfile"   type="button" class="btn btn-default">| 개발자 프로필</router-link> |
-    <router-link to="/info"  type="button" class="btn btn-default">서비스 소개</router-link> |
-    <router-link to="/guide" type="button" class="btn btn-default" >이용 방법</router-link> |
-    <router-link to="/todolist" type="button" class="btn btn-default">Todolist보기</router-link> |
-    <router-link to="/counter" type="button" class="btn btn-default">Counter</router-link> |
-    <router-link to="/network" type="button" class="btn btn-default">Network</router-link> |
-    <router-link to="/eventTest" type="button" class="btn btn-default">EventExample</router-link> |
-    <button type="button" class="btn btn-default" @click="historyBack" >돌아가기</button>
-    <router-link to="/"  type="button" class="btn btn-default">홈</router-link>
-    <router-view></router-view> 
-     
+        <TodoHeader router-link to="/vue" ></TodoHeader>
+        <router-link to="/devProfile"   type="button" class="btn btn-default">| 개발자 프로필</router-link> |
+        <router-link to="/info"  type="button" class="btn btn-default">서비스 소개</router-link> |
+        <router-link to="/guide" type="button" class="btn btn-default" >이용 방법</router-link> |
+        <router-link to="/todolist" type="button" class="btn btn-default">Todolist보기</router-link> |
+        <router-link to="/counter" type="button" class="btn btn-default">Counter</router-link> |
+        <router-link to="/network" type="button" class="btn btn-default">Network</router-link> |
+        <router-link to="/eventTest" type="button" class="btn btn-default">EventExample</router-link> |
+        <button type="button" class="btn btn-default" @click="historyBack" >돌아가기</button> |
+        <router-link to="/"  type="button" class="btn btn-default">홈</router-link> |
+        <router-view></router-view> 
+        
     </div>
 </template>
    
@@ -102,13 +99,13 @@ export default{
     .shadow{
         box-shadow: 5px 10px 10px rgba(0,0,0,0.03)
     }
-   /*  .router-link-active {
+    /*  .router-link-active {
         color: white;
         background-color: red;
     } */
-  /*   .router-link-exact-active {
-  color: white;
-  background-color: #62acde;
-} */
+    /*  .router-link-exact-active {
+        color: white;
+        background-color: #62acde;
+    } */
 </style>
 

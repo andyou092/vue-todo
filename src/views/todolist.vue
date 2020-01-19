@@ -7,7 +7,7 @@
         <todo-list id="list" propsTest="정적 props테스트"  v-bind:propsdata="todoItems" @removeTodo="removeTodo" @updateTodo="updateTodo"></todo-list><!--list는 props를 통해 상위에서 하위로 데이터를 전달하기 위해서   /지우기 위해서 하위 컴포넌트에서 상위 컴포넌트로 이벤트를 전달하기 위해서 이벤트 발생시킨것을 수신하는것이다.. -->
         <!-- <TodoList id="list" v-bind:propsdata="todoItems1" @removeTodo="removeTodo" @updateTodo="updateTodo"></TodoList> -->
         <todo-footer v-on:removeAll="clearAll"></todo-footer>
-        <test></test>
+       
     </div>
 </template>
 <script>
@@ -15,7 +15,6 @@ import TodoHeader from '../components/TodoHeader.vue'
 import TodoInput from '../components/TodoInput.vue'
 import TodoList from '../components/TodoList.vue'
 import TodoFooter from '../components/TodoFooter.vue'
-import Test from '../components/Test.vue'
 //import User from '../components/userComponent/AddUser.vue'
 import { mapState } from 'vuex'
 export default {
@@ -24,7 +23,7 @@ export default {
         'todo-input': TodoInput,
         'todo-list': TodoList,
         'todo-footer': TodoFooter,
-        'test':Test
+       
         //'user':User
     },
     data(){//데이터 배열로 초기화 지정
@@ -34,7 +33,8 @@ export default {
             propsTest:'부모 데이터'//정적 props Test코드
         }
     },
-    created(){
+    //created:function(){
+        created(){
         console.log('created들어온다.');
         if(localStorage.length>0){//localStorage에 데이터가 있다면 data(){todoItems} 에 있는todoItems에 데이터를 넣어두어라.  
             for(let i =0; i< this.$store.state.listCount; i++){ 
@@ -83,15 +83,7 @@ export default {
             localStorage.setItem(this.$store.state.listCount,todoItem);//key, value
             let aTGetValue = localStorage.getItem(this.$store.state.listCount,todoItem);
             this.todoItems.push(aTGetValue);
-            console.log(localStorage.length)
-
-             var a = 10;
-                for (var a = 0; a < 5; a++) {           
-                    console.log('for'+a); // 0 1 2 3 4 
-                }
-                console.log('last'+a); // 5
-                //alert('다시 확인해주세요');   
-
+            console.log(localStorage.length);
         },
         clearAll(){//Todo AllRemove
             localStorage.clear();//localStorage에 있는것을 모두 지워라.
