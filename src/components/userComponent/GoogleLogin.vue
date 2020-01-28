@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     googleLogin() {
-      firebase.auth().signInWithPopup(provider).then((result) => {
+      firebase.auth().signInWithPopup(provider).then((result) => {//es06
         var token = result.credential.accessToken
         var user = result.user
  

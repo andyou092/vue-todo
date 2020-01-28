@@ -7,7 +7,7 @@
 <div>
     <h2>이벤트 리스너와 수식어</h2> 
     <p>v-on 디렉티브를 사용하여 DOM 이벤트를 듣고 트리거 될 때 JavaScript를 실행할 수 있습니다.</p>
-      <pre>    
+<pre>    
 <code class="hljs html">
 <p>template</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-1"</span>&gt;</span>
@@ -15,7 +15,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span style="color:red">위 버튼을 클릭한 횟수는 &#123;&#123; counter &#125;&#125; 번 입니다.</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code>
-      </pre>
+</pre>
       <pre>
 <p>script</p>
 <code class="hljs js"><span class="hljs-keyword">var</span> example1 = <span class="hljs-keyword">new</span> Vue(&#123;

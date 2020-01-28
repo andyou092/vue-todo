@@ -4,6 +4,7 @@
          <!-- <div class="listCount"> -->
          <h4>|할일 개수 : {{this.$store.state.listCount}}개 |</h4>        
          <!-- </div> -->
+        
         <todo-list id="list" propsTest="정적 props테스트"  v-bind:propsdata="todoItems" @removeTodo="removeTodo" @updateTodo="updateTodo"></todo-list><!--list는 props를 통해 상위에서 하위로 데이터를 전달하기 위해서   /지우기 위해서 하위 컴포넌트에서 상위 컴포넌트로 이벤트를 전달하기 위해서 이벤트 발생시킨것을 수신하는것이다.. -->
         <!-- <TodoList id="list" v-bind:propsdata="todoItems1" @removeTodo="removeTodo" @updateTodo="updateTodo"></TodoList> -->
         <todo-footer v-on:removeAll="clearAll"></todo-footer>
