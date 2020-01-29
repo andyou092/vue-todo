@@ -13,22 +13,40 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
     data(){
         return{
             loginValue:''
         }    
-        
-        
     },
     methods:{
         isLogin:function (){
             console.log(this.$store.state.loginAuth)
             this.loginValue =this.$store.state.loginAuth;
-                return this.loginValue;
-
+                 firebase.auth().signOut().then(function() {
+            // Sign-out successful.
+                console.log('logOut 성공');
+            }).catch(function(error) {
+            // An error happened.
+            console.log('logOut 실패'+ err);
+            }); 
+            return this.loginValue;
         }
     }
+   /*  watch:{
+        loginValue:function(){
+          //  this.loginValue =this.$store.state.loginAuth;
+
+             firebase.auth().signOut().then(function() {
+            // Sign-out successful.
+                console.log('logOut 성공');
+            }).catch(function(error) {
+            // An error happened.
+            console.log('logOut 실패'+ err);
+            });
+        }
+    }//watch */
 }
 </script>
 

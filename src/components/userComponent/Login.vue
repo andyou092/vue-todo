@@ -61,7 +61,9 @@ export default {
             this.$store.dispatch('authUser')
     }//authUser
     //methods
-      ,watch:{//유저 로그인 or 로그아웃시
+      
+  },
+  watch:{//유저 로그인 or 로그아웃시
           users: function (authUser) {
               if(this.$store.state.loginAuth) {
                   alert('유저 상태 값이 수정 되었습니다.')
@@ -71,8 +73,7 @@ export default {
                       this.$store.commit('authUser')
               }
           }
-      }
-  }
+      }//watch
 }
 
 
