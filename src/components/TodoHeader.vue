@@ -4,7 +4,7 @@
     <ul> 
        
         <router-link to="/logout" tag="button" v-if="isLogin()">로그아웃</router-link>
-       <router-link to="/login" tag="button" v-else>로그인</router-link>
+        <router-link to="/login" tag="button" v-else>로그인</router-link>
 
     <p v-if="loginValue">{{this.$store.state.email}}로그인중</p>
 

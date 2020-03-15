@@ -5,18 +5,14 @@
             <input type="password" v-model="password" placeholder="Password">
             <button class="logBtn" @click="login">로그인</button>         
            <br>
-              <span><router-link to="/googlelogin"><img class="googleLogo " src="assets\googlelogo.png"/> </router-link></span><br>
-              <span><router-link to="/facebooklogin" ><img class="faceBookLogo" src="assets\faceBookLogo.png"/> </router-link></span><br>
-              
-             <span  type="button" class="btn btn-warning"> 
+            <span><router-link to="/googlelogin"><img class="googleLogo " src="assets\googlelogo.png"/> </router-link></span><br>
+            <span><router-link to="/facebooklogin" ><img class="faceBookLogo" src="assets\faceBookLogo.png"/> </router-link></span><br>
+            
+            <span  type="button" class="btn btn-warning"> 
                <span>계정이 없다면 </span>
                <router-link to="/signup">회원가입</router-link>
-               </span><br>
-           
-             
-
- 
-
+            </span><br>
+        
     </div>
 </template>
 
@@ -44,17 +40,17 @@ export default {
              let user = firebase.auth().currentUser;
              this.$store.state.email=user.email;
               this.$store.commit('loginEmail')
-            alert(JSON.stringify(user.email))
+            alert(JSON.stringify(user.email))//JSON객체를 String으로 변환해준다. parse는 String을 JSON Object로 변환해준다.
           }
         ).catch( x=> {
            console.err('이메일 형식 로그인 err : ' + err)
            alert('에러 : ' + err.message)   
           });
             this.$router.replace(this.$route.query.redirect || '/')
-            this.clearInfut();
+            this.clearInput();
             
       }//logi
-    ,clearInfut(){ 
+    ,clearInput(){ 
           this.email='';
           this.password='';
     },authUser() {

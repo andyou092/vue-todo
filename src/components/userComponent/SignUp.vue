@@ -6,7 +6,6 @@
             <input type="password" v-model="password"  placeholder="Password">
             <button @click="signUp">가입하기</button>
             <span>또는 <router-link to="/login"> 로그인</router-link>으로 돌아가기</span>"
-
     </div>
 
 
