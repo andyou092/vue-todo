@@ -9,8 +9,8 @@
         <router-link to="/counter" type="button" class="btn btn-default">Counter</router-link> |
         <router-link to="/network" type="button" class="btn btn-default">Network</router-link> |
         <router-link to="/eventTest" type="button" class="btn btn-default">EventExample</router-link> |
-        <button  class="btn btn-default" @click="historyBack" >돌아가기</button> |
-        <router-link to="/"  type="button" class="btn btn-default">홈</router-link> |
+        <button  class="btn btn-light" @click="historyBack" >돌아가기</button> |
+        <router-link to="/"  type="button" class="btn btn-light">홈</router-link> |
         <router-view></router-view> 
         
     </div>
