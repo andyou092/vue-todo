@@ -9,7 +9,7 @@
         <router-link to="/counter" type="button" class="btn btn-default">Counter</router-link> |
         <router-link to="/network" type="button" class="btn btn-default">Network</router-link> |
         <router-link to="/eventTest" type="button" class="btn btn-default">EventExample</router-link> |
-        <button  class="btn btn-light" @click="historyBack" >돌아가기</button> |
+        <button type="button" class="btn btn-light" @click="historyBack" >돌아가기</button> |
         <router-link to="/"  type="button" class="btn btn-light">홈</router-link> |
         <router-view></router-view> 
         
@@ -63,21 +63,10 @@ export default{
 }
 </script>
 <style>
-    .homeBtn{
-       
-        background-color: #2F3B52; /* Green */
-        border: none;
-        color: white;
-        padding: 2px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-  
-    }
-    .historyBack{
+   
+ /*    .historyBack{
         
-        background-color:  #2F3B52; /* Green */
+        background-color:  #2F3B52; //Green
         border: none;
         color: white;
         padding: 2px 10px;
@@ -85,8 +74,7 @@ export default{
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-
-    }
+    } */
     body{
         text-align: center;
         background-color: #F6F6F8;
